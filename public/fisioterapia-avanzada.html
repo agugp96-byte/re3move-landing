@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fisioterapia avanzada — Re3Move | Ecografía, EPI, Neuromodulación en Palma</title>
+<meta name="description" content="Seis disciplinas de fisioterapia avanzada en Palma de Mallorca: ecografía musculoesquelética, EPI, neuromodulación percutánea, diatermia Indiba, superinductiva y VOESS.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Fisioterapia avanzada — Re3Move">
+<meta property="og:description" content="Ecografía, EPI, neuromodulación percutánea, diatermia, superinductiva y VOESS. Tecnología clínica al servicio de tu recuperación en Palma de Mallorca.">
+<meta property="og:image" content="/assets/photos/clinic-03-ecografia.jpeg">
+<meta property="og:locale" content="es_ES">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://re3move.es/fisioterapia-avanzada">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/styles.css">
+
+<style>
+/* === Breadcrumbs === */
+.crumbs { padding: 22px 0 0; }
+.crumbs-inner { font-size: 12.5px; color: var(--faint); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.crumbs-inner a { color: var(--muted); }
+.crumbs-inner a:hover { color: var(--green); }
+.crumbs-sep { opacity: 0.5; }
+.crumbs-current { color: var(--ink); font-weight: 500; }
+
+/* === Page hero === */
+.phero { padding: 56px 0 64px; }
+.phero-eyebrow { font-family: var(--font-k); font-size: 12px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--green); margin-bottom: 18px; }
+.phero h1 { font-family: var(--font-h); font-weight: 800; font-size: clamp(40px, 6vw, 72px); line-height: 0.98; letter-spacing: -0.045em; color: var(--ink); margin-bottom: 24px; text-wrap: balance; max-width: 14ch; }
+.phero h1 em { font-style: normal; color: var(--green); }
+.phero-lead { font-size: 19px; color: var(--muted); line-height: 1.6; max-width: 620px; }
+
+/* === Sticky discipline nav === */
+.disnav { position: sticky; top: 68px; z-index: 50; background: #fff; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.disnav-inner { display: flex; gap: 4px; overflow-x: auto; padding: 14px 0; scrollbar-width: none; }
+.disnav-inner::-webkit-scrollbar { display: none; }
+.disnav-chip { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 8px; padding: 9px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; color: var(--muted); border: 1px solid var(--border); background: #fff; transition: all 0.15s; white-space: nowrap; cursor: pointer; }
+.disnav-chip:hover { color: var(--green); border-color: var(--green); }
+.disnav-chip.is-active { background: var(--ink); color: #fff; border-color: var(--ink); }
+.disnav-num { font-family: var(--font-k); font-weight: 700; opacity: 0.55; }
+.disnav-chip.is-active .disnav-num { opacity: 0.7; }
+
+/* === Discipline section === */
+.dis { padding: 96px 0 0; scroll-margin-top: 128px; }
+.dis + .dis { border-top: 1px solid var(--border); margin-top: 96px; }
+.dis-tag-row { display: flex; align-items: baseline; gap: 18px; margin-bottom: 22px; }
+.dis-num { font-family: var(--font-h); font-weight: 800; font-size: 96px; line-height: 0.85; letter-spacing: -0.05em; color: var(--green); opacity: 0.2; }
+.dis-cat { font-family: var(--font-k); font-size: 12px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--green); }
+
+.dis-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 64px; align-items: start; }
+.dis h2 { font-family: var(--font-h); font-weight: 800; font-size: clamp(32px, 4.4vw, 52px); line-height: 1.02; letter-spacing: -0.04em; color: var(--ink); margin-bottom: 22px; text-wrap: balance; }
+.dis h2 em { font-style: normal; color: var(--green); }
+.dis-lead { font-size: 18px; color: var(--muted); line-height: 1.65; margin-bottom: 26px; max-width: 540px; }
+.dis-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.dis-tag { display: inline-block; font-size: 11.5px; font-weight: 600; padding: 5px 12px; border-radius: 20px; background: var(--bg); color: var(--muted); border: 1px solid var(--border); letter-spacing: 0.2px; }
+.dis-tag.invasive { background: #fff3ed; color: #b54e1c; border-color: #f4d4be; }
+.dis-tag.diagnostic { background: #eef4ff; color: #2454b3; border-color: #cbd9f2; }
+.dis-tag.guided { background: var(--green-dim); color: var(--green-d); border-color: rgba(45,122,79,0.25); }
+
+/* spec card */
+.spec { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 28px; }
+.spec-title { font-family: var(--font-h); font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--ink); margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+.spec-row { display: flex; justify-content: space-between; gap: 16px; padding: 12px 0; border-bottom: 1px dashed var(--border); font-size: 14px; }
+.spec-row:last-child { border-bottom: none; }
+.spec-key { color: var(--muted); }
+.spec-val { color: var(--ink); font-weight: 500; text-align: right; }
+
+/* sub-block */
+.dis-block { padding-top: 56px; }
+.dis-block-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--green); margin-bottom: 12px; font-family: var(--font-k); }
+.dis-block-title { font-family: var(--font-h); font-weight: 800; font-size: clamp(22px, 2.6vw, 30px); line-height: 1.15; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 20px; text-wrap: balance; max-width: 720px; }
+.dis-prose { max-width: 720px; }
+.dis-prose p { font-size: 16.5px; color: var(--muted); line-height: 1.78; margin-bottom: 16px; }
+.dis-prose p strong { color: var(--ink); font-weight: 600; }
+.dis-prose p:last-child { margin-bottom: 0; }
+
+/* how steps */
+.how-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-top: 12px; }
+.how-step { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 24px; }
+.how-num { font-family: var(--font-h); font-weight: 800; font-size: 32px; color: var(--green); letter-spacing: -0.04em; line-height: 1; margin-bottom: 14px; }
+.how-step h4 { font-family: var(--font-h); font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.2px; }
+.how-step p { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+/* indications */
+.ind-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 4px; }
+.ind-item { display: flex; align-items: flex-start; gap: 12px; padding: 18px 20px; background: var(--bg); border-radius: 12px; border: 1px solid transparent; transition: all 0.15s; }
+.ind-item:hover { border-color: var(--green); background: var(--green-dim); }
+.ind-check { flex: 0 0 22px; width: 22px; height: 22px; border-radius: 50%; background: var(--green); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; margin-top: 2px; }
+.ind-text { font-size: 15px; color: var(--ink); font-weight: 500; line-height: 1.45; }
+.ind-text small { display: block; font-weight: 400; color: var(--muted); font-size: 13px; margin-top: 2px; }
+
+/* faq */
+.faq-list { margin-top: 4px; max-width: 820px; }
+.faq-item { border-top: 1px solid var(--border); padding: 22px 0; }
+.faq-item:last-child { border-bottom: 1px solid var(--border); }
+.faq-q { font-family: var(--font-h); font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 8px; letter-spacing: -0.2px; }
+.faq-a { font-size: 15px; color: var(--muted); line-height: 1.7; }
+
+/* per-discipline footer link row */
+.dis-foot { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 32px 0; margin-top: 64px; border-top: 1px dashed var(--border); }
+.dis-foot-back { display: inline-flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--muted); font-weight: 500; }
+.dis-foot-back:hover { color: var(--green); }
+.dis-foot-back svg { width: 14px; height: 14px; }
+.dis-foot-next { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: var(--ink); }
+.dis-foot-next:hover { color: var(--green); }
+.dis-foot-next-label { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--faint); display: block; margin-bottom: 2px; }
+
+/* CTA strip */
+.tcta { padding: 80px 0; background: var(--ink); color: #fff; margin-top: 96px; }
+.tcta-inner { display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; }
+.tcta h3 { font-family: var(--font-h); font-weight: 800; font-size: clamp(26px, 3.2vw, 38px); letter-spacing: -0.03em; line-height: 1.1; max-width: 640px; }
+.tcta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.tcta-actions .btn-primary { background: var(--green-b); color: var(--ink); }
+.tcta-actions .btn-primary:hover { background: #fff; }
+
+/* simple bottom footer override */
+.tfoot { padding: 36px 0; background: #fff; border-top: 1px solid var(--border); text-align: center; font-size: 13px; color: var(--faint); }
+.tfoot a { color: var(--muted); margin: 0 10px; }
+.tfoot a:hover { color: var(--green); }
+
+@media (max-width: 880px) {
+  .dis-grid { grid-template-columns: 1fr; gap: 32px; }
+  .how-grid { grid-template-columns: 1fr; }
+  .ind-grid { grid-template-columns: 1fr; }
+  .dis-num { font-size: 64px; }
+}
+@media (max-width: 600px) {
+  .dis { padding-top: 64px; }
+  .dis + .dis { margin-top: 64px; }
+  .dis-block { padding-top: 40px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Top navigation -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark">R3</div>
+      <span class="nav-logo-name">re³MOVE</span>
+    </a>
+
+    <div class="nav-links">
+      <div class="nav-dd">
+        <span class="nav-dd-label">
+          Servicios
+          <svg class="nav-dd-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <div class="nav-dd-menu nav-dd-menu--wide">
+          <div class="nav-dd-section">Pilares clínicos</div>
+          <a href="/clinica-deportiva.html" class="nav-dd-feature">
+            Clínica deportiva
+            <small>Fisio de élite + readaptación</small>
+          </a>
+          <a href="/fisioterapia-avanzada.html">
+            Fisioterapia avanzada
+            <small>Ecografía, EPI, neuromodulación…</small>
+          </a>
+          <a href="/mujer.html">
+            Mujer
+            <small>Suelo pélvico, embarazo, postparto</small>
+          </a>
+        </div>
+      </div>
+      <a href="/#metodologia">Método</a>
+      <a href="/#equipo">Equipo</a>
+      <a href="/#ubicacion">Ubicación</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="https://wa.me/34620326447" target="_blank" class="nav-cta">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Pedir cita
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menú de navegación">
+  <div class="mm-group" id="mm-servicios">
+    <div class="mm-group-label">
+      Servicios
+      <svg class="mm-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="mm-submenu"><div>
+      <a href="/clinica-deportiva.html">Clínica deportiva<small>Fisio de élite + readaptación</small></a>
+      <a href="/fisioterapia-avanzada.html">Fisioterapia avanzada<small>Ecografía, EPI, neuromodulación…</small></a>
+      <a href="/mujer.html">Mujer<small>Suelo pélvico, embarazo, postparto</small></a>
+    </div></div>
+  </div>
+  <a href="/#metodologia">Método</a>
+  <a href="/#equipo">Equipo</a>
+  <a href="/#ubicacion">Ubicación</a>
+  <a href="https://wa.me/34620326447" target="_blank" class="mm-cta">Pedir cita</a>
+</div>
+
+<div class="container crumbs">
+  <div class="crumbs-inner">
+    <a href="/">Inicio</a>
+    <span class="crumbs-sep">/</span>
+    <span class="crumbs-current">Fisioterapia avanzada</span>
+  </div>
+</div>
+
+<!-- Page hero -->
+<section class="phero">
+  <div class="container">
+    <div class="phero-eyebrow">Pilar 01 · Fisioterapia avanzada</div>
+    <h1>Tecnología clínica al servicio de tu <em>recuperación</em>.</h1>
+    <p class="phero-lead">Seis disciplinas que combinamos según tu caso: imagen para entender qué pasa, técnicas invasivas guiadas para tratar lo que no avanza, y herramientas no invasivas que aceleran el proceso. Todas integradas con terapia manual y ejercicio — nunca aisladas.</p>
+  </div>
+</section>
+
+<!-- Sticky discipline nav -->
+<nav class="disnav">
+  <div class="container">
+    <div class="disnav-inner" id="disnav">
+      <a href="#ecografia" class="disnav-chip"><span class="disnav-num">01</span>Ecografía</a>
+      <a href="#epi" class="disnav-chip"><span class="disnav-num">02</span>EPI</a>
+      <a href="#neuromodulacion" class="disnav-chip"><span class="disnav-num">03</span>Neuromodulación</a>
+      <a href="#diatermia" class="disnav-chip"><span class="disnav-num">04</span>Diatermia</a>
+      <a href="#superinductiva" class="disnav-chip"><span class="disnav-num">05</span>Superinductiva</a>
+      <a href="#voess" class="disnav-chip"><span class="disnav-num">06</span>VOESS</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================ -->
+<!-- 01 — ECOGRAFÍA                               -->
+<!-- ============================================ -->
+<section class="dis" id="ecografia">
+  <div class="container">
+
+    <div class="dis-tag-row">
+      <span class="dis-num">01</span>
+      <span class="dis-cat">Diagnóstico por imagen</span>
+    </div>
+
+    <div class="dis-grid">
+      <div>
+        <h2>Ecografía <em>musculoesquelética</em></h2>
+        <p class="dis-lead">Imagen por ultrasonidos en tiempo real para confirmar diagnósticos, descartar lesiones graves y monitorizar la evolución — sin radiación.</p>
+        <div class="dis-tags">
+          <span class="dis-tag diagnostic">Diagnóstico por imagen</span>
+          <span class="dis-tag">No invasiva</span>
+          <span class="dis-tag">Sin radiación</span>
+        </div>
+      </div>
+      <aside class="spec">
+        <div class="spec-title">Resumen rápido</div>
+        <div class="spec-row"><span class="spec-key">Tipo</span><span class="spec-val">Diagnóstica</span></div>
+        <div class="spec-row"><span class="spec-key">Duración</span><span class="spec-val">15–25 min</span></div>
+        <div class="spec-row"><span class="spec-key">Sesiones</span><span class="spec-val">Puntual o seguimiento</span></div>
+        <div class="spec-row"><span class="spec-key">Recuperación</span><span class="spec-val">Inmediata</span></div>
+        <div class="spec-row"><span class="spec-key">Equipo</span><span class="spec-val">Ecógrafo profesional</span></div>
+      </aside>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Qué es</div>
+      <h3 class="dis-block-title">En qué consiste y qué buscamos.</h3>
+      <div class="dis-prose">
+        <p>La <strong>ecografía musculoesquelética</strong> es una técnica de imagen que utiliza ultrasonidos para visualizar en tiempo real músculos, tendones, ligamentos, nervios y articulaciones. No emite radiación, es indolora y permite ver el tejido <strong>en movimiento</strong> — algo que una resonancia o radiografía no pueden ofrecer.</p>
+        <p>En consulta la utilizamos como complemento al examen clínico: cuando hay duda diagnóstica, queremos descartar una rotura, o necesitamos seguimiento objetivo de cómo evoluciona una lesión semana a semana.</p>
+        <p>También es la <strong>guía visual</strong> imprescindible para aplicar técnicas invasivas como EPI o neuromodulación con precisión milimétrica.</p>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Cómo lo aplicamos</div>
+      <h3 class="dis-block-title">El protocolo, paso a paso.</h3>
+      <div class="how-grid">
+        <div class="how-step"><div class="how-num">01</div><h4>Valoración clínica</h4><p>Antes de la ecografía hacemos exploración física para tener una hipótesis. La imagen sirve para confirmar o descartar.</p></div>
+        <div class="how-step"><div class="how-num">02</div><h4>Exploración guiada</h4><p>Aplicamos gel y exploramos la zona desde varios planos. Comparamos con la zona contralateral cuando aporta información.</p></div>
+        <div class="how-step"><div class="how-num">03</div><h4>Informe e integración</h4><p>Te explicamos qué se ve, qué significa y cómo afecta al plan de tratamiento. La imagen es una herramienta, no un diagnóstico aislado.</p></div>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Indicaciones</div>
+      <h3 class="dis-block-title">Cuándo está indicada esta técnica.</h3>
+      <div class="ind-grid">
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Tendinopatías<small>Rotuliana, aquílea, manguito rotador, epicondilalgia.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Roturas musculares<small>Cuantificar grado, localización y seguimiento.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Esguinces de ligamento<small>Tobillo, rodilla, pulgar, dedos.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Bursitis y derrames<small>Hombro, cadera, codo, rodilla.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Guía para EPI / Neuromodulación<small>Localización exacta del tejido a tratar.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Seguimiento de la lesión<small>Imagen objetiva semana a semana.</small></div></div>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Preguntas frecuentes</div>
+      <h3 class="dis-block-title">Lo que más nos preguntáis.</h3>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-q">¿Sustituye a una resonancia?</div><div class="faq-a">No, son técnicas complementarias. La ecografía es excelente para tendones, músculos y ligamentos superficiales — y aporta la ventaja del estudio dinámico. La resonancia es mejor para estructuras profundas, hueso y cartílago.</div></div>
+        <div class="faq-item"><div class="faq-q">¿Hay algún riesgo?</div><div class="faq-a">Ninguno. No utiliza radiación ionizante y no produce efectos secundarios. Se puede repetir tantas veces como sea necesario.</div></div>
+        <div class="faq-item"><div class="faq-q">¿La hace un fisioterapeuta?</div><div class="faq-a">Sí, dentro del marco de la ecografía musculoesquelética aplicada a fisioterapia: como herramienta de valoración funcional y guía de tratamiento, no como diagnóstico médico de imagen.</div></div>
+      </div>
+    </div>
+
+    <div class="dis-foot">
+      <a href="/" class="dis-foot-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver al inicio
+      </a>
+      <a href="#epi" class="dis-foot-next">
+        <span><span class="dis-foot-next-label">Siguiente</span>02 · EPI</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:16px;height:16px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 02 — EPI                                     -->
+<!-- ============================================ -->
+<section class="dis" id="epi">
+  <div class="container">
+
+    <div class="dis-tag-row">
+      <span class="dis-num">02</span>
+      <span class="dis-cat">Tratamiento invasivo</span>
+    </div>
+
+    <div class="dis-grid">
+      <div>
+        <h2>EPI <em>—</em> Electrolisis percutánea</h2>
+        <p class="dis-lead">Corriente galvánica aplicada con aguja sobre tejido degenerado, guiada por ecografía. Reactiva la cicatrización en tendinopatías que no avanzan.</p>
+        <div class="dis-tags">
+          <span class="dis-tag invasive">Invasiva</span>
+          <span class="dis-tag guided">Guiada por ecografía</span>
+          <span class="dis-tag">Corriente galvánica</span>
+        </div>
+      </div>
+      <aside class="spec">
+        <div class="spec-title">Resumen rápido</div>
+        <div class="spec-row"><span class="spec-key">Tipo</span><span class="spec-val">Tratamiento invasivo</span></div>
+        <div class="spec-row"><span class="spec-key">Duración</span><span class="spec-val">20–30 min</span></div>
+        <div class="spec-row"><span class="spec-key">Sesiones</span><span class="spec-val">4–8 habitualmente</span></div>
+        <div class="spec-row"><span class="spec-key">Frecuencia</span><span class="spec-val">Cada 7–10 días</span></div>
+        <div class="spec-row"><span class="spec-key">Recuperación</span><span class="spec-val">Molestia 24–72h</span></div>
+      </aside>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Qué es</div>
+      <h3 class="dis-block-title">En qué consiste y qué buscamos.</h3>
+      <div class="dis-prose">
+        <p>La <strong>EPI</strong> consiste en aplicar una corriente galvánica de baja intensidad directamente sobre el tejido degenerado, mediante una aguja de acupuntura guiada por ecografía. La corriente provoca una respuesta inflamatoria <strong>controlada y localizada</strong> que reactiva los procesos naturales de reparación del tendón.</p>
+        <p>A diferencia de un antiinflamatorio, no buscamos apagar la inflamación: en una tendinopatía crónica el tejido está degenerado, no inflamado. La EPI reabre el proceso de cicatrización para que el tendón se reorganice — siempre acompañada de <strong>ejercicio progresivo</strong>, sin él no funciona.</p>
+        <p>Es especialmente eficaz en tendinopatías crónicas que no responden a tratamiento manual o ejercicio aislado, y donde otras opciones serían infiltraciones o cirugía.</p>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Cómo lo aplicamos</div>
+      <h3 class="dis-block-title">El protocolo, paso a paso.</h3>
+      <div class="how-grid">
+        <div class="how-step"><div class="how-num">01</div><h4>Localización ecográfica</h4><p>Identificamos exactamente la zona del tendón con cambios estructurales. La aguja se aplica donde realmente hay degeneración.</p></div>
+        <div class="how-step"><div class="how-num">02</div><h4>Aplicación galvánica</h4><p>Sesiones de unos pocos pulsos de corriente, aplicadas con aguja fina. Se nota un picor o calor moderado durante la aplicación.</p></div>
+        <div class="how-step"><div class="how-num">03</div><h4>Ejercicio progresivo</h4><p>Tras cada sesión, programa de carga adaptado. La EPI prepara el terreno; el ejercicio reorganiza el tendón.</p></div>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Indicaciones</div>
+      <h3 class="dis-block-title">Cuándo está indicada esta técnica.</h3>
+      <div class="ind-grid">
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Tendinopatía rotuliana<small>Rodilla del saltador.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Tendinopatía aquílea<small>Cuerpo del tendón o inserción.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Manguito rotador<small>Supraespinoso, infraespinoso.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Epicondilalgia<small>Codo de tenista / golfista.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Fascitis plantar<small>Inserción y cuerpo de la fascia.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Pubalgia / aductores<small>Tendinopatía inserción del aductor.</small></div></div>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Preguntas frecuentes</div>
+      <h3 class="dis-block-title">Lo que más nos preguntáis.</h3>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-q">¿Duele?</div><div class="faq-a">Es molesto pero tolerable. El picor de la corriente dura segundos. Es habitual notar dolor en la zona durante 24–72h tras la sesión — es la respuesta inflamatoria que buscamos.</div></div>
+        <div class="faq-item"><div class="faq-q">¿En cuántas sesiones se nota?</div><div class="faq-a">La mayoría de pacientes notan cambios reales a partir de la 3ª–4ª sesión. Un proceso completo suele ser de 4 a 8 sesiones, espaciadas 7–10 días.</div></div>
+        <div class="faq-item"><div class="faq-q">¿Funciona sin ejercicio?</div><div class="faq-a">No. La EPI sola tiene efecto limitado. Es la combinación con un programa de fuerza progresiva la que cambia el pronóstico de una tendinopatía.</div></div>
+        <div class="faq-item"><div class="faq-q">¿Puedo entrenar entre sesiones?</div><div class="faq-a">Sí, con la carga ajustada. Te indicamos qué hacer y qué evitar. La idea no es parar, es entrenar bien.</div></div>
+      </div>
+    </div>
+
+    <div class="dis-foot">
+      <a href="/" class="dis-foot-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver al inicio
+      </a>
+      <a href="#neuromodulacion" class="dis-foot-next">
+        <span><span class="dis-foot-next-label">Siguiente</span>03 · Neuromodulación</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:16px;height:16px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 03 — NEUROMODULACIÓN                         -->
+<!-- ============================================ -->
+<section class="dis" id="neuromodulacion">
+  <div class="container">
+
+    <div class="dis-tag-row">
+      <span class="dis-num">03</span>
+      <span class="dis-cat">Tratamiento invasivo</span>
+    </div>
+
+    <div class="dis-grid">
+      <div>
+        <h2>Neuromodulación <em>percutánea</em></h2>
+        <p class="dis-lead">Corriente eléctrica aplicada sobre el nervio periférico para reactivar la conexión nervio–músculo. Útil cuando el problema no es el tejido, sino el control nervioso.</p>
+        <div class="dis-tags">
+          <span class="dis-tag invasive">Invasiva</span>
+          <span class="dis-tag guided">Guiada por ecografía</span>
+          <span class="dis-tag">Estímulo nervioso</span>
+        </div>
+      </div>
+      <aside class="spec">
+        <div class="spec-title">Resumen rápido</div>
+        <div class="spec-row"><span class="spec-key">Tipo</span><span class="spec-val">Tratamiento invasivo</span></div>
+        <div class="spec-row"><span class="spec-key">Duración</span><span class="spec-val">15–25 min</span></div>
+        <div class="spec-row"><span class="spec-key">Sesiones</span><span class="spec-val">3–6 habitualmente</span></div>
+        <div class="spec-row"><span class="spec-key">Frecuencia</span><span class="spec-val">Semanal</span></div>
+        <div class="spec-row"><span class="spec-key">Recuperación</span><span class="spec-val">Inmediata</span></div>
+      </aside>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Qué es</div>
+      <h3 class="dis-block-title">En qué consiste y qué buscamos.</h3>
+      <div class="dis-prose">
+        <p>La <strong>neuromodulación percutánea</strong> aplica corriente eléctrica directamente sobre el nervio periférico —no sobre el músculo— mediante una aguja guiada por ecografía. El objetivo es <strong>reactivar la conexión</strong> entre el sistema nervioso y el músculo cuando ésta se ha visto alterada por una lesión, una cirugía o un patrón de dolor mantenido.</p>
+        <p>Es especialmente útil cuando un músculo está <strong>inhibido</strong>: no le falta fibra, le falta señal. Tras una lesión de LCA, por ejemplo, el cuádriceps deja de activarse correctamente aunque sigamos entrenándolo; ahí la neuromodulación puede recuperar fuerza mucho más rápido que el ejercicio aislado.</p>
+        <p>A diferencia de la EPI, aquí no buscamos modificar el tejido: buscamos <strong>cambiar el comportamiento del nervio</strong>. Los efectos suelen notarse desde las primeras sesiones.</p>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Cómo lo aplicamos</div>
+      <h3 class="dis-block-title">El protocolo, paso a paso.</h3>
+      <div class="how-grid">
+        <div class="how-step"><div class="how-num">01</div><h4>Localización del nervio</h4><p>Identificamos por ecografía el nervio diana — femoral, ciático, supraescapular, etc. La aguja se posiciona junto al nervio, no dentro.</p></div>
+        <div class="how-step"><div class="how-num">02</div><h4>Estímulo dosificado</h4><p>Aplicamos corriente eléctrica a frecuencia controlada durante unos minutos. Se nota como pulsaciones o contracciones del músculo dependiente del nervio.</p></div>
+        <div class="how-step"><div class="how-num">03</div><h4>Reentrenamiento inmediato</h4><p>Tras la estimulación, ejercicios de activación voluntaria del músculo. Aprovechamos la ventana en la que la conexión está optimizada.</p></div>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Indicaciones</div>
+      <h3 class="dis-block-title">Cuándo está indicada esta técnica.</h3>
+      <div class="ind-grid">
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Inhibición del cuádriceps<small>Tras LCA, prótesis de rodilla, artroscopia.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Hombro doloroso<small>Manguito rotador, supraescapular.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Lumbalgia con musculatura inhibida<small>Multifidos, glúteo medio.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Atrapamientos nerviosos<small>Túnel del carpo, piramidal, suprascapular.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Dolor neuropático<small>Pinzamientos, ciatalgia, cervicobraquialgia.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Postoperatorio reciente<small>Recuperar control motor sin sobrecargar.</small></div></div>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Preguntas frecuentes</div>
+      <h3 class="dis-block-title">Lo que más nos preguntáis.</h3>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-q">¿Es lo mismo que el TENS?</div><div class="faq-a">No. El TENS es estimulación eléctrica a través de la piel, sobre el músculo. La neuromodulación se aplica directamente al nervio periférico mediante aguja guiada por ecografía. Profundidad y precisión completamente distintas.</div></div>
+        <div class="faq-item"><div class="faq-q">¿Duele?</div><div class="faq-a">Es molesto durante los segundos de la corriente — sensación de calambre o contracción. La pinchadura es indolora con aguja fina. No suele haber dolor posterior.</div></div>
+        <div class="faq-item"><div class="faq-q">¿En cuántas sesiones noto cambios?</div><div class="faq-a">Habitualmente desde la primera o segunda sesión. Un proceso completo son 3 a 6 sesiones semanales, siempre integradas con readaptación o entrenamiento.</div></div>
+      </div>
+    </div>
+
+    <div class="dis-foot">
+      <a href="/" class="dis-foot-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver al inicio
+      </a>
+      <a href="#diatermia" class="dis-foot-next">
+        <span><span class="dis-foot-next-label">Siguiente</span>04 · Diatermia</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:16px;height:16px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 04 — DIATERMIA                               -->
+<!-- ============================================ -->
+<section class="dis" id="diatermia">
+  <div class="container">
+
+    <div class="dis-tag-row">
+      <span class="dis-num">04</span>
+      <span class="dis-cat">Tratamiento no invasivo</span>
+    </div>
+
+    <div class="dis-grid">
+      <div>
+        <h2>Diatermia <em>(Indiba)</em></h2>
+        <p class="dis-lead">Radiofrecuencia que genera calor en profundidad sin dañar la piel. Acelera la regeneración del tejido, mejora la circulación y reduce el dolor.</p>
+        <div class="dis-tags">
+          <span class="dis-tag">No invasiva</span>
+          <span class="dis-tag">Termoterapia profunda</span>
+          <span class="dis-tag">Radiofrecuencia</span>
+        </div>
+      </div>
+      <aside class="spec">
+        <div class="spec-title">Resumen rápido</div>
+        <div class="spec-row"><span class="spec-key">Tipo</span><span class="spec-val">Tratamiento no invasivo</span></div>
+        <div class="spec-row"><span class="spec-key">Duración</span><span class="spec-val">15–20 min (integrada en sesión)</span></div>
+        <div class="spec-row"><span class="spec-key">Sesiones</span><span class="spec-val">Según objetivo</span></div>
+        <div class="spec-row"><span class="spec-key">Recuperación</span><span class="spec-val">Inmediata</span></div>
+        <div class="spec-row"><span class="spec-key">Equipo</span><span class="spec-val">Indiba Activ</span></div>
+      </aside>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Qué es</div>
+      <h3 class="dis-block-title">En qué consiste y qué buscamos.</h3>
+      <div class="dis-prose">
+        <p>La <strong>diatermia</strong> es una tecnología de radiofrecuencia (capacitiva y resistiva) que genera calor <strong>desde dentro del tejido</strong>, sin dañar la piel. A diferencia de un infrarrojo o una bolsa caliente, el calor no entra desde fuera: se produce en profundidad, llegando al músculo, tendón o cápsula articular que necesitamos tratar.</p>
+        <p>Tiene tres modos de aplicación: <strong>atérmico</strong> (sin calor, en fase aguda), <strong>térmico suave</strong> (regeneración) y <strong>térmico intenso</strong> (rigideces, dolor crónico). Esto la hace versátil tanto en una lesión reciente como en un proceso de meses.</p>
+        <p>No se usa como tratamiento aislado: la integramos dentro de la sesión habitual de fisioterapia, combinada con terapia manual y ejercicio. Es una herramienta para <strong>preparar el tejido</strong> y acelerar el resultado del trabajo manual.</p>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Cómo lo aplicamos</div>
+      <h3 class="dis-block-title">El protocolo, paso a paso.</h3>
+      <div class="how-grid">
+        <div class="how-step"><div class="how-num">01</div><h4>Modo según fase</h4><p>Aguda → atérmico (control de inflamación). Subaguda → térmico suave (regeneración). Crónica → térmico intenso (vascularización y rango).</p></div>
+        <div class="how-step"><div class="how-num">02</div><h4>Aplicación dinámica</h4><p>Movemos el cabezal sobre la zona durante la sesión. No es un electrodo fijo: trabajamos en movimiento, combinando con masaje o estiramientos.</p></div>
+        <div class="how-step"><div class="how-num">03</div><h4>Combinación con ejercicio</h4><p>Tras la diatermia, el tejido está más receptivo. Aprovechamos para introducir movilidad, activación o carga progresiva.</p></div>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Indicaciones</div>
+      <h3 class="dis-block-title">Cuándo está indicada esta técnica.</h3>
+      <div class="ind-grid">
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Lesiones musculares<small>Roturas, contracturas, sobrecargas.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Tendinopatías<small>Fase regenerativa, mejora de la matriz.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Esguinces y rigideces<small>Tobillo, rodilla, hombro congelado.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Postoperatorios<small>Drenaje, control de edema, regeneración.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Dolor crónico<small>Lumbalgia, cervicalgia, dolor articular.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Patología articular<small>Artrosis sintomática, capsulitis.</small></div></div>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Preguntas frecuentes</div>
+      <h3 class="dis-block-title">Lo que más nos preguntáis.</h3>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-q">¿Se siente algo durante la sesión?</div><div class="faq-a">Una sensación de calor agradable y profundo, controlable en todo momento. En modo atérmico no se nota cambio de temperatura.</div></div>
+        <div class="faq-item"><div class="faq-q">¿Tiene contraindicaciones?</div><div class="faq-a">Sí: marcapasos, embarazo, prótesis metálicas en la zona, neoplasias activas. En la valoración inicial revisamos antecedentes.</div></div>
+        <div class="faq-item"><div class="faq-q">¿Sustituye al ejercicio?</div><div class="faq-a">No. Es una herramienta complementaria que acelera procesos. El cambio real lo produce el trabajo activo.</div></div>
+      </div>
+    </div>
+
+    <div class="dis-foot">
+      <a href="/" class="dis-foot-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver al inicio
+      </a>
+      <a href="#superinductiva" class="dis-foot-next">
+        <span><span class="dis-foot-next-label">Siguiente</span>05 · Superinductiva</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:16px;height:16px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 05 — SUPERINDUCTIVA                          -->
+<!-- ============================================ -->
+<section class="dis" id="superinductiva">
+  <div class="container">
+
+    <div class="dis-tag-row">
+      <span class="dis-num">05</span>
+      <span class="dis-cat">Tratamiento no invasivo</span>
+    </div>
+
+    <div class="dis-grid">
+      <div>
+        <h2>Estimulación <em>superinductiva</em></h2>
+        <p class="dis-lead">Estimulación magnética de alta intensidad capaz de penetrar hasta 10 cm en el tejido sin contacto directo. Llega a musculatura profunda donde la electroestimulación convencional no alcanza.</p>
+        <div class="dis-tags">
+          <span class="dis-tag">No invasiva</span>
+          <span class="dis-tag">Magnetoterapia de alta intensidad</span>
+          <span class="dis-tag">Sin contacto</span>
+        </div>
+      </div>
+      <aside class="spec">
+        <div class="spec-title">Resumen rápido</div>
+        <div class="spec-row"><span class="spec-key">Tipo</span><span class="spec-val">Tratamiento no invasivo</span></div>
+        <div class="spec-row"><span class="spec-key">Duración</span><span class="spec-val">10–15 min</span></div>
+        <div class="spec-row"><span class="spec-key">Sesiones</span><span class="spec-val">Variable según objetivo</span></div>
+        <div class="spec-row"><span class="spec-key">Recuperación</span><span class="spec-val">Inmediata</span></div>
+        <div class="spec-row"><span class="spec-key">Penetración</span><span class="spec-val">Hasta 10 cm</span></div>
+      </aside>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Qué es</div>
+      <h3 class="dis-block-title">En qué consiste y qué buscamos.</h3>
+      <div class="dis-prose">
+        <p>La <strong>estimulación superinductiva</strong> utiliza un campo magnético de alta intensidad para estimular musculatura y nervios a gran profundidad — hasta 10 cm — sin necesidad de contacto directo con la piel. No es electroterapia: es magnetoterapia con potencia clínica.</p>
+        <p>Su gran ventaja frente a un TENS o una electroestimulación convencional es la <strong>profundidad</strong>: alcanza estructuras que de otra forma serían inaccesibles —multifidos lumbares, glúteo medio profundo, suelo pélvico, musculatura paravertebral profunda—. Provoca contracciones musculares involuntarias controladas que reentrenan patrones inhibidos.</p>
+        <p>También tiene un efecto <strong>analgésico</strong> directo por modulación de la transmisión del dolor, útil en lumbalgias, dolor crónico y procesos donde el dolor mantiene al músculo apagado.</p>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Cómo lo aplicamos</div>
+      <h3 class="dis-block-title">El protocolo, paso a paso.</h3>
+      <div class="how-grid">
+        <div class="how-step"><div class="how-num">01</div><h4>Posicionamiento</h4><p>Cabezal sobre la zona a tratar — sin gel, sin contacto directo. Atraviesa ropa y permite trabajar zonas profundas con comodidad.</p></div>
+        <div class="how-step"><div class="how-num">02</div><h4>Pulsos magnéticos</h4><p>Aplicamos pulsos a frecuencia variable durante 10–15 min. Notas contracciones musculares involuntarias y una sensación de impulso profundo.</p></div>
+        <div class="how-step"><div class="how-num">03</div><h4>Activación voluntaria</h4><p>Tras la estimulación, ejercicios para integrar el patrón motor recién facilitado. Aprovechamos la ventana de máxima respuesta neural.</p></div>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Indicaciones</div>
+      <h3 class="dis-block-title">Cuándo está indicada esta técnica.</h3>
+      <div class="ind-grid">
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Lumbalgia crónica<small>Inhibición de multifidos profundos.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Atrofia tras inmovilización<small>Postcirugía, escayola, reposo prolongado.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Dolor pélvico<small>Disfunción de musculatura profunda.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Reeducación neurológica<small>Activación tras inhibición motora.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Glúteo medio inhibido<small>Cadera, dolor lumbar mecánico.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Incontinencia leve<small>Refuerzo de suelo pélvico (combinado).</small></div></div>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Preguntas frecuentes</div>
+      <h3 class="dis-block-title">Lo que más nos preguntáis.</h3>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-q">¿Se nota dolor?</div><div class="faq-a">No. Se siente como un impulso o contracción profunda controlable. La intensidad se ajusta a tu tolerancia desde el primer pulso.</div></div>
+        <div class="faq-item"><div class="faq-q">¿Hay contraindicaciones?</div><div class="faq-a">Marcapasos, implantes electrónicos, embarazo, epilepsia activa, material metálico en la zona. Lo revisamos en la valoración inicial.</div></div>
+        <div class="faq-item"><div class="faq-q">¿Cuánto tarda en hacer efecto?</div><div class="faq-a">En dolor: efecto analgésico habitual desde la primera sesión. En reactivación muscular: 4–6 sesiones para cambios consolidados.</div></div>
+      </div>
+    </div>
+
+    <div class="dis-foot">
+      <a href="/" class="dis-foot-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver al inicio
+      </a>
+      <a href="#voess" class="dis-foot-next">
+        <span><span class="dis-foot-next-label">Siguiente</span>06 · VOESS</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:16px;height:16px;"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- 06 — VOESS                                   -->
+<!-- ============================================ -->
+<section class="dis" id="voess">
+  <div class="container">
+
+    <div class="dis-tag-row">
+      <span class="dis-num">06</span>
+      <span class="dis-cat">Valoración y estimulación</span>
+    </div>
+
+    <div class="dis-grid">
+      <div>
+        <h2>VOESS <em>—</em> Valoración somatosensorial</h2>
+        <p class="dis-lead">Sistema de valoración y estimulación del sistema somatosensorial: cómo procesa el sistema nervioso la información del cuerpo. Aporta datos objetivos cuando un caso no avanza.</p>
+        <div class="dis-tags">
+          <span class="dis-tag diagnostic">Valoración objetiva</span>
+          <span class="dis-tag">Estimulación</span>
+          <span class="dis-tag">Sistema nervioso</span>
+        </div>
+      </div>
+      <aside class="spec">
+        <div class="spec-title">Resumen rápido</div>
+        <div class="spec-row"><span class="spec-key">Tipo</span><span class="spec-val">Valoración + tratamiento</span></div>
+        <div class="spec-row"><span class="spec-key">Duración</span><span class="spec-val">30–45 min</span></div>
+        <div class="spec-row"><span class="spec-key">Sesiones</span><span class="spec-val">Variable</span></div>
+        <div class="spec-row"><span class="spec-key">Aplicación</span><span class="spec-val">Casos complejos / estancados</span></div>
+      </aside>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Qué es</div>
+      <h3 class="dis-block-title">En qué consiste y qué buscamos.</h3>
+      <div class="dis-prose">
+        <p><strong>VOESS</strong> (Valoración y Estimulación Somatosensorial) es un sistema diseñado para <strong>medir y modular</strong> cómo procesa el sistema nervioso la información que llega del cuerpo: presión, posición, movimiento, dolor. Toda esa información viaja al cerebro y vuelve modificada en forma de orden motora — y cuando ese procesamiento se altera, los síntomas dejan de encajar con un patrón clásico de tejido.</p>
+        <p>Es especialmente útil cuando la recuperación se ha estancado, cuando el dolor no se corresponde con la imagen, cuando hay sensibilización central o cuando el control motor no se reintegra tras una cirugía. En estos casos, el problema no es el tendón ni el músculo: es <strong>cómo el sistema nervioso lee y responde</strong> a esa zona.</p>
+        <p>Aporta datos objetivos —umbrales sensoriales, calidad del procesamiento, asimetrías— que el examen clínico no captura. A partir de ahí podemos <strong>modular la respuesta neural</strong> con estímulos específicos y reeducación dirigida.</p>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Cómo lo aplicamos</div>
+      <h3 class="dis-block-title">El protocolo, paso a paso.</h3>
+      <div class="how-grid">
+        <div class="how-step"><div class="how-num">01</div><h4>Valoración cuantitativa</h4><p>Medimos umbrales somatosensoriales en la zona afectada y en la contralateral. Detectamos asimetrías, hiposensibilidad, hipersensibilidad y patrones alterados.</p></div>
+        <div class="how-step"><div class="how-num">02</div><h4>Interpretación clínica</h4><p>Cruzamos los datos con la historia del paciente y el examen clínico. La imagen del problema cambia: ya no es "tendinitis", es "patrón sensorial alterado en la zona".</p></div>
+        <div class="how-step"><div class="how-num">03</div><h4>Estimulación dirigida</h4><p>Aplicamos estímulos específicos para normalizar el procesamiento — vibración, presión, movimiento controlado — combinados con tareas motoras.</p></div>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Indicaciones</div>
+      <h3 class="dis-block-title">Cuándo está indicada esta técnica.</h3>
+      <div class="ind-grid">
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Dolor crónico mantenido<small>Lumbar, cervical, dolor regional complejo.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Sensibilización central<small>Dolor desproporcionado al estímulo.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Lesiones que no avanzan<small>Casos estancados pese a tratamiento correcto.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Reeducación postoperatoria<small>Recuperar propiocepción y control sensoriomotor.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Esguinces de repetición<small>Tobillo inestable con propiocepción alterada.</small></div></div>
+        <div class="ind-item"><div class="ind-check">✓</div><div class="ind-text">Optimización del control motor<small>Deportistas buscando margen de mejora.</small></div></div>
+      </div>
+    </div>
+
+    <div class="dis-block">
+      <div class="dis-block-eyebrow">Preguntas frecuentes</div>
+      <h3 class="dis-block-title">Lo que más nos preguntáis.</h3>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-q">¿Es una prueba diagnóstica médica?</div><div class="faq-a">No. Es una herramienta de valoración funcional dentro del marco fisioterápico. Aporta datos objetivos sobre el procesamiento sensorial — no sustituye pruebas médicas convencionales.</div></div>
+        <div class="faq-item"><div class="faq-q">¿Para qué pacientes está indicada?</div><div class="faq-a">Especialmente para casos donde el examen físico y la imagen no explican los síntomas, o donde la recuperación se ha estancado. También como optimización en deportistas.</div></div>
+        <div class="faq-item"><div class="faq-q">¿Es invasiva?</div><div class="faq-a">No. Toda la valoración y estimulación se realiza con estímulos externos no dolorosos.</div></div>
+      </div>
+    </div>
+
+    <div class="dis-foot">
+      <a href="/" class="dis-foot-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver al inicio
+      </a>
+      <a href="#ecografia" class="dis-foot-next">
+        <span><span class="dis-foot-next-label">Volver al principio</span>01 · Ecografía</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" style="width:16px;height:16px;transform:rotate(-90deg);"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA strip -->
+<section class="tcta">
+  <div class="container tcta-inner">
+    <h3>¿Quieres saber qué técnica encaja con tu caso? Lo valoramos en la primera sesión.</h3>
+    <div class="tcta-actions">
+      <a href="https://wa.me/34620326447" target="_blank" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Pedir cita
+      </a>
+      <a href="/" class="btn-ghost">Volver al inicio</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="tfoot">
+  <div class="container">
+    © 2026 Re3Move ·
+    <a href="/">Inicio</a> ·
+    <a href="/clinica-deportiva.html">Clínica deportiva</a> ·
+    <a href="/mujer.html">Mujer</a> ·
+    <a href="https://wa.me/34620326447" target="_blank">Pedir cita</a>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a href="https://wa.me/34620326447" target="_blank" class="wa-float" aria-label="Contactar por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// Nav scroll shadow
+(function() {
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }, {passive: true});
+})();
+
+// Mobile menu
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', function() {
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', false);
+    }
+  });
+  // Accordion
+  document.querySelectorAll('.mm-group-label').forEach(function(label) {
+    label.addEventListener('click', function() {
+      label.closest('.mm-group').classList.toggle('open');
+    });
+  });
+})();
+
+// Highlight active discipline chip on scroll
+(function() {
+  var sections = document.querySelectorAll('.dis');
+  var chips = document.querySelectorAll('.disnav-chip');
+  function setActive() {
+    var pos = window.scrollY + 200;
+    var current = sections[0].id;
+    sections.forEach(function(s) {
+      if (s.offsetTop <= pos) current = s.id;
+    });
+    chips.forEach(function(c) {
+      c.classList.toggle('is-active', c.getAttribute('href') === '#' + current);
+    });
+    var active = document.querySelector('.disnav-chip.is-active');
+    if (active) {
+      var nav = document.getElementById('disnav');
+      var aL = active.offsetLeft;
+      var aW = active.offsetWidth;
+      var nL = nav.scrollLeft;
+      var nW = nav.clientWidth;
+      if (aL < nL + 20) nav.scrollTo({left: aL - 20, behavior: 'smooth'});
+      else if (aL + aW > nL + nW - 20) nav.scrollTo({left: aL + aW - nW + 20, behavior: 'smooth'});
+    }
+  }
+  setActive();
+  window.addEventListener('scroll', setActive, {passive: true});
+})();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Re3Move — Clínica de Recuperación, Readaptación y Rendimiento. Fisioterapia, entrenamiento personalizado, suelo pélvico y embarazo en Mallorca.">
+<title>Re3Move — Clínica de Fisioterapia en Mallorca</title>
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon.svg">
+<link rel="canonical" href="https://re3move.es/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Re3Move — Clínica de Fisioterapia en Mallorca">
+<meta property="og:description" content="Clínica de Recuperación, Readaptación y Rendimiento. Fisioterapia especializada, entrenamiento y suelo pélvico en Mallorca.">
+<meta property="og:image" content="/assets/photos/clinic-02-physio-baby.jpeg">
+<meta property="og:locale" content="es_ES">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "PhysicalTherapist",
+  "name": "Re3Move",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Carrer George Orwell 1",
+    "addressLocality": "Palma",
+    "addressRegion": "Mallorca",
+    "addressCountry": "ES"
+  },
+  "telephone": "+34620326447",
+  "email": "re3movecenter@gmail.com",
+  "url": "https://re3move.es",
+  "openingHours": "Mo-Fr 08:00-21:00"
+}
+</script>
+<style>
+/* ══════════════════ HERO ═════════════════════════════ */
+.hero { min-height: 100vh; background: var(--logo-bg); display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 68px; }
+.hero::after { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 70% 60% at 80% 40%, rgba(255,255,255,0.04) 0%, transparent 65%); pointer-events:none; }
+.hero-inner { position: relative; z-index: 2; padding: 80px 0; }
+.hero-kicker { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
+.hero-kicker-line { width: 28px; height: 1.5px; background: rgba(255,255,255,0.3); flex-shrink: 0; }
+.hero-kicker-text { font-family: var(--font-b); font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.45); letter-spacing: 1.2px; text-transform: uppercase; }
+.hero-title { font-family: var(--font-h); font-weight: 800; font-size: clamp(48px, 7.5vw, 96px); color: #fff; line-height: 1.0; letter-spacing: -0.04em; margin-bottom: 28px; }
+.hero-title span { color: var(--green-b); }
+.hero-sub { font-size: clamp(15px, 1.8vw, 19px); color: rgba(255,255,255,0.5); max-width: 520px; line-height: 1.65; margin-bottom: 44px; font-weight: 300; }
+.hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.hero-actions .btn-wa { background: rgba(255,255,255,0.12); color: #fff; border: 1.5px solid rgba(255,255,255,0.35); }
+.hero-actions .btn-wa:hover { background: rgba(255,255,255,0.22); border-color: rgba(255,255,255,0.6); }
+.hero-bottom { display: flex; align-items: center; gap: 32px; margin-top: 72px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.07); flex-wrap: wrap; }
+.hero-stat { display: flex; flex-direction: column; gap: 2px; }
+.hero-stat-num { font-family: var(--font-k); font-weight: 800; font-size: 32px; color: #fff; letter-spacing: -0.03em; line-height: 1; }
+.hero-stat-label { font-size: 12px; color: rgba(255,255,255,0.38); letter-spacing: 0.3px; }
+.hero-divider { width: 1px; height: 36px; background: rgba(255,255,255,0.1); }
+
+/* ══════════════════ SERVICES ═════════════════════════ */
+.services { background: var(--white); }
+.services-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; flex-wrap: wrap; gap: 20px; }
+.services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.service-card { border-radius: 16px; overflow: hidden; position: relative; height: 380px; cursor: default; transition: transform 0.2s; display: block; }
+.service-card:hover { transform: translateY(-3px); }
+.service-card:hover .service-overlay { background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.3) 55%, rgba(0,0,0,0.1) 100%); }
+.service-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.4s ease; }
+.service-card:hover .service-bg { transform: scale(1.04); }
+.service-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0.05) 100%); transition: background 0.3s; }
+.service-body { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 26px; z-index: 2; }
+.service-num { font-family: var(--font-k); font-weight: 700; font-size: 11px; letter-spacing: 1.2px; color: rgba(255,255,255,0.45); margin-bottom: 6px; text-transform: uppercase; }
+.service-name { font-family: var(--font-h); font-weight: 800; font-size: 22px; color: #fff; margin-bottom: 8px; letter-spacing: -0.02em; line-height: 1.15; }
+.service-desc { font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+.service-tag { display: inline-block; margin-top: 12px; font-size: 10px; font-weight: 700; letter-spacing: 0.6px; color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2); padding: 3px 10px; border-radius: 20px; text-transform: uppercase; }
+
+/* ══════════════════ MUJER ════════════════════════════ */
+.mujer { background: var(--bg); padding: 96px 0; }
+.mujer-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
+.mujer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.mujer-card { position: relative; height: 320px; border-radius: 16px; overflow: hidden; display: block; transition: transform 0.2s; }
+.mujer-card:hover { transform: translateY(-3px); }
+.mujer-card:hover .mujer-bg { transform: scale(1.04); }
+.mujer-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.4s ease; }
+.mujer-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(58,87,72,0.92) 0%, rgba(58,87,72,0.5) 50%, rgba(58,87,72,0.15) 100%); }
+.mujer-body { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px 30px; z-index: 2; }
+.mujer-eyebrow { font-family: var(--font-b); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--green-b); margin-bottom: 8px; }
+.mujer-name { font-family: var(--font-h); font-weight: 800; font-size: 26px; color: #fff; margin-bottom: 10px; letter-spacing: -0.03em; line-height: 1.1; }
+.mujer-desc { font-size: 14px; color: rgba(255,255,255,0.78); line-height: 1.6; margin-bottom: 14px; }
+.mujer-cta { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #fff; }
+.mujer-cta::after { content:'→'; transition: transform 0.2s; }
+.mujer-card:hover .mujer-cta::after { transform: translateX(4px); }
+.mujer-intro { max-width: 640px; }
+.mujer-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--green); background: var(--white); border: 1px solid rgba(45,122,79,0.25); padding: 5px 12px; border-radius: 20px; margin-bottom: 16px; }
+.mujer-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-b); }
+
+/* ══════════════════ METHODOLOGY ══════════════════════ */
+.method { background: var(--bg); }
+.method-header { max-width: 600px; margin-bottom: 56px; }
+.method-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.method-step { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 32px 28px; }
+.method-num { font-family: var(--font-k); font-weight: 800; font-size: 52px; color: rgba(0,0,0,0.06); line-height: 1; margin-bottom: 14px; letter-spacing: -0.03em; }
+.method-name { font-family: var(--font-h); font-weight: 700; font-size: 17px; color: var(--ink); margin-bottom: 10px; }
+.method-desc { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+/* ══════════════════ TEAM ═════════════════════════════ */
+.team { background: var(--white); }
+.team-header { margin-bottom: 56px; }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.team-card { display: flex; gap: 16px; align-items: flex-start; }
+.team-photo { width: 88px; height: 88px; flex-shrink: 0; border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, #eef2f0, #dde5e0); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: #8aa89a; }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.team-photo-initials { font-family: var(--font-h); font-weight: 800; font-size: 26px; color: #6b8a78; letter-spacing: -0.02em; }
+.team-info { flex: 1; min-width: 0; padding-top: 4px; }
+.team-name { font-family: var(--font-h); font-weight: 700; font-size: 17px; color: var(--ink); margin-bottom: 2px; letter-spacing: -0.01em; }
+.team-role { font-size: 11px; font-weight: 700; color: var(--green); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.6px; }
+.team-bio { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+/* ══════════════════ LOCATION ═════════════════════════ */
+.location { background: var(--bg); }
+.location-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.location-map { border-radius: 16px; height: 380px; overflow: hidden; border: 1px solid var(--border); }
+.location-map iframe { width: 100%; height: 100%; border: 0; display: block; }
+.location-items { display: flex; flex-direction: column; gap: 26px; }
+.loc-item { display: flex; gap: 14px; align-items: flex-start; }
+.loc-icon { width: 40px; height: 40px; background: var(--white); border: 1px solid var(--border); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: var(--green); flex-shrink: 0; }
+.loc-label { font-size: 11px; font-weight: 700; letter-spacing: 0.6px; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; }
+.loc-value { font-size: 15px; color: var(--text); font-weight: 500; line-height: 1.5; }
+.loc-value a { color: var(--green); font-weight: 600; }
+
+/* ══════════════════ CONTACT ══════════════════════════ */
+.contact { background: var(--white); }
+.contact-inner { max-width: 880px; margin: 0 auto; text-align: center; }
+.contact-inner .section-sub { max-width: 560px; margin-left: auto; margin-right: auto; }
+.contact-note { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; padding: 7px 14px; background: var(--bg); border: 1px solid var(--border); border-radius: 100px; font-size: 12px; color: var(--muted); font-weight: 500; }
+.contact-note-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-b); }
+.contact-channels { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 44px; }
+.ch-btn-big { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 36px 28px; border-radius: 18px; border: 1.5px solid var(--border); background: var(--white); transition: all 0.2s; color: var(--ink); text-align: center; }
+.ch-btn-big:hover { border-color: var(--ink); transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,0.07); }
+.ch-btn-big .ch-icon { width: 56px; height: 56px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.ch-btn-big .ch-label { font-family: var(--font-h); font-size: 22px; font-weight: 800; color: var(--ink); letter-spacing: -0.02em; line-height: 1.1; }
+.ch-btn-big .ch-sub { font-size: 14px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+.ch-btn-big .ch-cta { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; font-size: 13px; font-weight: 700; letter-spacing: 0.3px; }
+.ch-btn-big.wa .ch-cta { color: #128c4f; }
+.ch-btn-big.em .ch-cta { color: var(--green); }
+.ch-btn-big .ch-cta::after { content:'→'; transition: transform 0.2s; }
+.ch-btn-big:hover .ch-cta::after { transform: translateX(3px); }
+.contact-extra { margin-top: 28px; display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; font-size: 13px; color: var(--muted); }
+.contact-extra a { color: var(--ink); font-weight: 600; transition: color 0.15s; }
+.contact-extra a:hover { color: var(--green); }
+.contact-extra .sep { width: 4px; height: 4px; border-radius: 50%; background: var(--border); }
+
+/* ══════════════════ TESTIMONIALS ═════════════════════ */
+.testimonials { background: var(--bg); }
+.test-header { margin-bottom: 52px; }
+.test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.test-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 28px 26px; }
+.test-stars { display: flex; gap: 3px; margin-bottom: 14px; color: #d4a017; font-size: 13px; }
+.test-quote { font-size: 14px; color: var(--text); line-height: 1.75; margin-bottom: 20px; font-style: italic; }
+.test-author { display: flex; align-items: center; gap: 10px; }
+.test-avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-h); font-weight: 800; font-size: 12px; color: #fff; flex-shrink: 0; }
+.test-name { font-size: 13px; font-weight: 600; color: var(--ink); }
+.test-service { font-size: 11px; color: var(--faint); }
+
+/* ══════════════════ RESPONSIVE ═══════════════════════ */
+@media (max-width: 900px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .mujer-grid { grid-template-columns: 1fr; }
+  .method-steps { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+  .test-grid { grid-template-columns: 1fr 1fr; }
+  .location-inner { grid-template-columns: 1fr; }
+  .contact-channels { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  .team-grid, .test-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-mark">R3</div>
+        <span class="nav-logo-name">re³MOVE</span>
+      </a>
+      <div class="nav-links">
+        <div class="nav-dd">
+          <span class="nav-dd-label">Fisioterapia avanzada
+            <svg class="nav-dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>
+          </span>
+          <div class="nav-dd-menu nav-dd-menu--wide">
+            <a href="/fisioterapia-avanzada.html" class="nav-dd-feature">Recuperación<small>Fisioterapia &amp; postoperatorios</small></a>
+            <div class="nav-dd-divider"></div>
+            <div class="nav-dd-section">Tecnologías</div>
+            <a href="/fisioterapia-avanzada.html#ecografia">Ecografía<small>Diagnóstico por imagen en consulta</small></a>
+            <a href="/fisioterapia-avanzada.html#epi">EPI<small>Electrolisis percutánea intratisular</small></a>
+            <a href="/fisioterapia-avanzada.html#neuromodulacion">Neuromodulación<small>Activación del sistema nervioso</small></a>
+            <a href="/fisioterapia-avanzada.html#diatermia">Diatermia<small>Termoterapia profunda (Indiba)</small></a>
+            <a href="/fisioterapia-avanzada.html#superinductiva">Superinductiva<small>Estimulación magnética de alta intensidad</small></a>
+            <a href="/fisioterapia-avanzada.html#voess">VOESS<small>Valoración y estim. somatosensorial</small></a>
+            <div class="nav-dd-divider"></div>
+            <a href="/fisioterapia-avanzada.html" style="font-size:12px;color:var(--green);font-weight:600;">Ver todo en una página →</a>
+          </div>
+        </div>
+        <div class="nav-dd">
+          <span class="nav-dd-label">Clínica deportiva
+            <svg class="nav-dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>
+          </span>
+          <div class="nav-dd-menu">
+            <a href="/clinica-deportiva.html#readaptacion">Readaptación<small>Vuelta al deporte tras lesión</small></a>
+            <a href="/clinica-deportiva.html#rendimiento">Rendimiento<small>Fútbol, CrossFit, running</small></a>
+            <a href="/clinica-deportiva.html#online">Programación online<small>Plan personalizado a distancia</small></a>
+            <div class="nav-dd-divider"></div>
+            <a href="/clinica-deportiva.html" style="font-size:12px;color:var(--green);font-weight:600;">Ver todo en una página →</a>
+          </div>
+        </div>
+        <div class="nav-dd">
+          <span class="nav-dd-label">Mujer
+            <svg class="nav-dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>
+          </span>
+          <div class="nav-dd-menu">
+            <a href="/mujer.html#suelo-pelvico">Suelo pélvico<small>Fisioterapia uroginecológica</small></a>
+            <a href="/mujer.html#embarazo">Embarazo &amp; posparto<small>Acompañamiento integral</small></a>
+            <div class="nav-dd-divider"></div>
+            <a href="/mujer.html" style="font-size:12px;color:var(--green);font-weight:600;">Ver todo en una página →</a>
+          </div>
+        </div>
+        <a href="#equipo">Equipo</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="nav-right">
+        <a href="https://wa.me/34620326447" target="_blank" class="nav-cta">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Pedir cita
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mm-group">
+    <div class="mm-group-label">Fisioterapia avanzada
+      <svg class="mm-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>
+    </div>
+    <div class="mm-submenu"><div>
+      <a href="/fisioterapia-avanzada.html">Recuperación<small>Fisioterapia &amp; postoperatorios</small></a>
+      <a href="/fisioterapia-avanzada.html#ecografia">Ecografía<small>Diagnóstico por imagen</small></a>
+      <a href="/fisioterapia-avanzada.html#epi">EPI<small>Electrolisis percutánea</small></a>
+      <a href="/fisioterapia-avanzada.html#neuromodulacion">Neuromodulación<small>Activación nerviosa</small></a>
+      <a href="/fisioterapia-avanzada.html#diatermia">Diatermia<small>Termoterapia profunda</small></a>
+      <a href="/fisioterapia-avanzada.html#superinductiva">Superinductiva<small>Estimulación magnética</small></a>
+      <a href="/fisioterapia-avanzada.html#voess">VOESS<small>Estim. somatosensorial</small></a>
+    </div></div>
+  </div>
+  <div class="mm-group">
+    <div class="mm-group-label">Clínica deportiva
+      <svg class="mm-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>
+    </div>
+    <div class="mm-submenu"><div>
+      <a href="/clinica-deportiva.html#readaptacion">Readaptación<small>Vuelta al deporte tras lesión</small></a>
+      <a href="/clinica-deportiva.html#rendimiento">Rendimiento<small>Fútbol, CrossFit, running</small></a>
+      <a href="/clinica-deportiva.html#online">Programación online<small>Plan personalizado</small></a>
+    </div></div>
+  </div>
+  <div class="mm-group">
+    <div class="mm-group-label">Mujer
+      <svg class="mm-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>
+    </div>
+    <div class="mm-submenu"><div>
+      <a href="/mujer.html#suelo-pelvico">Suelo pélvico<small>Fisioterapia uroginecológica</small></a>
+      <a href="/mujer.html#embarazo">Embarazo &amp; posparto<small>Acompañamiento integral</small></a>
+    </div></div>
+  </div>
+  <a href="#equipo">Equipo</a>
+  <a href="#contacto">Contacto</a>
+  <a href="https://wa.me/34620326447" target="_blank" class="mm-cta">Pedir cita</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-kicker fade-up">
+        <div class="hero-kicker-line"></div>
+        <span class="hero-kicker-text">Clínica de Fisioterapia — Mallorca</span>
+      </div>
+      <h1 class="hero-title fade-up d1">
+        Recupera.<br>Readapta.<br>Rinde.
+      </h1>
+      <p class="hero-sub fade-up d2">
+        Te acompañamos desde la lesión hasta el rendimiento óptimo. Fisioterapia especializada, entrenamiento y atención integral para que te muevas mejor cada día.
+      </p>
+      <div class="hero-actions fade-up d3">
+        <a href="https://wa.me/34620326447" target="_blank" class="btn-wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Pedir cita
+        </a>
+        <a href="#servicios" class="btn-ghost">Ver servicios</a>
+      </div>
+      <div class="hero-bottom fade-up d4">
+        <div class="hero-stat"><span class="hero-stat-num">+2.000</span><span class="hero-stat-label">Personas tratadas</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat"><span class="hero-stat-num">3</span><span class="hero-stat-label">Pilares de tratamiento</span></div>
+        <div class="hero-divider"></div>
+        <div class="hero-stat"><span class="hero-stat-num">8+</span><span class="hero-stat-label">Años de experiencia</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section services" id="servicios">
+  <div class="container">
+    <div class="services-header">
+      <div>
+        <div class="tag">Clínica deportiva</div>
+        <h2 class="section-title">Recupera. Readapta. Rinde.</h2>
+      </div>
+      <p class="section-sub">Tres fases conectadas, un mismo equipo. Te acompañamos desde la lesión aguda hasta tu mejor versión deportiva — sin saltos ni atajos.</p>
+    </div>
+    <div class="services-grid">
+      <a href="/fisioterapia-avanzada.html" class="service-card">
+        <div class="service-bg" style="background-image:url('/assets/photos/clinic-02-physio-baby.jpeg');"></div>
+        <div class="service-overlay"></div>
+        <div class="service-body">
+          <div class="service-num">01 →</div>
+          <div class="service-name">Recuperación</div>
+          <p class="service-desc">Fisioterapia para lesiones, dolor agudo y postoperatorios. Te quitamos el dolor y devolvemos el movimiento.</p>
+          <span class="service-tag">Fisioterapia clínica</span>
+        </div>
+      </a>
+      <a href="/clinica-deportiva.html" class="service-card">
+        <div class="service-bg" style="background-image:url('/assets/photos/training-03-step-up.png');" loading="lazy"></div>
+        <div class="service-overlay"></div>
+        <div class="service-body">
+          <div class="service-num">02 →</div>
+          <div class="service-name">Readaptación</div>
+          <p class="service-desc">Vuelta segura al deporte y a la actividad. Recuperamos fuerza, control motor y gestos específicos — sin recaer.</p>
+          <span class="service-tag">Vuelta al deporte</span>
+        </div>
+      </a>
+      <a href="/clinica-deportiva.html#rendimiento" class="service-card">
+        <div class="service-bg" style="background-image:url('/assets/photos/training-01-stability.png');"></div>
+        <div class="service-overlay"></div>
+        <div class="service-body">
+          <div class="service-num">03 →</div>
+          <div class="service-name">Rendimiento</div>
+          <p class="service-desc">Entrenamiento de fuerza y prevención para deportistas. Optimizamos tu mejor versión con un plan supervisado.</p>
+          <span class="service-tag">Performance</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MUJER -->
+<section class="mujer" id="mujer">
+  <div class="container">
+    <div class="mujer-header">
+      <div class="mujer-intro">
+        <span class="mujer-tag"><span class="mujer-tag-dot"></span>Área de la mujer</span>
+        <h2 class="section-title">Suelo pélvico &amp; embarazo.</h2>
+        <p class="section-sub" style="margin-top:14px;">Una rama propia dentro de Re3Move, especializada en fisioterapia uroginecológica y obstétrica. Atendida por <strong style="color:var(--ink);">Judith Iglesias</strong>, fisioterapeuta con dos másteres en salud pélvica y rendimiento.</p>
+      </div>
+    </div>
+    <div class="mujer-grid">
+      <a href="/mujer.html#suelo-pelvico" class="mujer-card">
+        <div class="mujer-bg" style="background-image:url('/assets/photos/clinic-03-ecografia.jpeg');"></div>
+        <div class="mujer-overlay"></div>
+        <div class="mujer-body">
+          <div class="mujer-eyebrow">Fisioterapia uroginecológica</div>
+          <div class="mujer-name">Suelo pélvico</div>
+          <p class="mujer-desc">Incontinencia, dolor pélvico, prolapsos, cicatrices y disfunciones sexuales. Valoración con ecografía funcional.</p>
+          <span class="mujer-cta">Ver servicio</span>
+        </div>
+      </a>
+      <a href="/mujer.html#embarazo" class="mujer-card">
+        <div class="mujer-bg" style="background-image:url('/assets/photos/clinic-05-pregnancy-side.jpeg');"></div>
+        <div class="mujer-overlay"></div>
+        <div class="mujer-body">
+          <div class="mujer-eyebrow">Fisioterapia obstétrica</div>
+          <div class="mujer-name">Embarazo &amp; posparto</div>
+          <p class="mujer-desc">Acompañamiento durante el embarazo, preparación al parto y recuperación posparto. Individual y en grupo reducido.</p>
+          <span class="mujer-cta">Ver servicio</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- METHODOLOGY -->
+<section class="section method" id="metodologia">
+  <div class="container">
+    <div class="method-header">
+      <div class="tag">Metodología</div>
+      <h2 class="section-title">Cómo trabajamos</h2>
+      <p class="section-sub">Un proceso claro y centrado en la persona. Cada paciente es único, y nuestra forma de trabajar lo refleja.</p>
+    </div>
+    <div class="method-steps">
+      <div class="method-step">
+        <div class="method-num">01</div>
+        <div class="method-name">Valoración inicial</div>
+        <p class="method-desc">Evaluación completa de historial, postura, movimiento y objetivos. Nada comienza sin entender quién eres y qué necesitas.</p>
+      </div>
+      <div class="method-step">
+        <div class="method-num">02</div>
+        <div class="method-name">Plan personalizado</div>
+        <p class="method-desc">Diseñamos un programa específico: frecuencia de sesiones, técnicas de tratamiento, ejercicios y objetivos a corto y largo plazo.</p>
+      </div>
+      <div class="method-step">
+        <div class="method-num">03</div>
+        <div class="method-name">Seguimiento continuo</div>
+        <p class="method-desc">Medimos tu evolución en cada visita y ajustamos el plan. El objetivo no es solo recuperarte, es que no vuelvas a lesionarte.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section team" id="equipo">
+  <div class="container">
+    <div class="team-header">
+      <div class="tag">El equipo</div>
+      <h2 class="section-title">Las personas detrás de Re3Move.</h2>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo">
+          <span class="team-photo-initials">XC</span>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Xavier Calvo</div>
+          <div class="team-role">Director · Fisio + CAFYD</div>
+          <p class="team-bio">Fisioterapeuta y Graduado en CAFYD. Lidera el modelo asistencial y deportivo de Re3Move.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <span class="team-photo-initials">AG</span>
+        </div>
+        <div class="team-info">
+          <div class="team-name">Augusto García</div>
+          <div class="team-role">Fisio · Readaptador</div>
+          <p class="team-bio">Fisioterapeuta y readaptador deportivo. Vuelta al deporte, fuerza y rendimiento.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="/assets/photos/clinic-07-judith-pelvis.jpeg" alt="Judith Iglesias" loading="lazy" />
+        </div>
+        <div class="team-info">
+          <div class="team-name">Judith Iglesias</div>
+          <div class="team-role">Suelo pélvico · Mujer</div>
+          <p class="team-bio">Dos másteres en salud pélvica y rendimiento en atletas femeninas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section class="section location" id="ubicacion">
+  <div class="container">
+    <div class="location-inner">
+      <div>
+        <div class="tag">Ubicación</div>
+        <h2 class="section-title">Ven a vernos</h2>
+        <p class="section-sub" style="margin-bottom:40px;">Estamos en el centro de Mallorca, con fácil acceso y aparcamiento cercano.</p>
+        <div class="location-items">
+          <div class="loc-item">
+            <div class="loc-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><div class="loc-label">Dirección</div><div class="loc-value">Carrer George Orwell 1 · Mallorca</div></div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg></div>
+            <div><div class="loc-label">Horario</div><div class="loc-value">Lunes a viernes · 8:00–21:00</div></div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 15 16.91l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><div class="loc-label">Teléfono</div><div class="loc-value"><a href="tel:+34620326447">+34 620 32 64 47</a></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="location-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3073.5!2d2.6505!3d39.5696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297913bde4b3da3%3A0x1!2sCarrer%20de%20George%20Orwell%2C%201%2C%2007002%20Palma%2C%20Illes%20Balears!5e0!3m2!1ses!2ses!4v1"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación Re3Move — Carrer George Orwell 1, Palma de Mallorca">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact" id="contacto">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="tag">Contacto</div>
+      <h2 class="section-title">¿Hablamos?</h2>
+      <p class="section-sub">Cuéntanos qué te ocurre. Te respondemos en menos de 24 horas.</p>
+      <div class="contact-note">
+        <span class="contact-note-dot"></span>
+        <span>Tarifas a consultar según tratamiento</span>
+      </div>
+      <div class="contact-channels">
+        <a href="https://wa.me/34620326447" target="_blank" class="ch-btn-big wa">
+          <div class="ch-icon" style="background:#dcfce7;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </div>
+          <div>
+            <div class="ch-label">WhatsApp</div>
+            <div class="ch-sub">+34 620 32 64 47<br>Respuesta rápida en horario de clínica</div>
+          </div>
+          <span class="ch-cta">Escríbenos por WhatsApp</span>
+        </a>
+        <a href="mailto:re3movecenter@gmail.com" class="ch-btn-big em">
+          <div class="ch-icon" style="background:#f0faf4;">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <div class="ch-label">Email</div>
+            <div class="ch-sub">re3movecenter@gmail.com<br>Para consultas detalladas</div>
+          </div>
+          <span class="ch-cta">Envíanos un correo</span>
+        </a>
+      </div>
+      <div class="contact-extra">
+        <span>O síguenos en</span>
+        <a href="https://www.instagram.com/re3move/" target="_blank">@re3move</a>
+        <span class="sep"></span>
+        <a href="tel:+34620326447">Llamar al +34 620 32 64 47</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section testimonials" id="testimonios">
+  <div class="container">
+    <div class="test-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
+      <div>
+        <div class="tag">Testimonios</div>
+        <h2 class="section-title">Lo que dicen<br>nuestros pacientes</h2>
+      </div>
+      <a href="https://g.page/r/review" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:10px 18px;background:#fff;border:1.5px solid #e5e7eb;border-radius:10px;text-decoration:none;transition:border-color 0.15s;flex-shrink:0;" onmouseover="this.style.borderColor='#4285F4'" onmouseout="this.style.borderColor='#e5e7eb'">
+        <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:#111827;line-height:1.2;">Google Reseñas</div>
+          <div style="font-size:11px;color:#6b7280;">Ver todas las opiniones</div>
+        </div>
+      </a>
+    </div>
+    <div class="test-grid">
+      <div class="test-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
+          <div class="test-stars">★★★★★</div>
+        </div>
+        <p class="test-quote">"Llevaba meses con dolor de espalda que no cedía con nada. En Re3Move me hicieron una valoración completa y en pocas semanas noté un cambio enorme."</p>
+        <div class="test-author">
+          <div class="test-avatar" style="background:linear-gradient(135deg,#be6d9b,#9b4d7b)">MG</div>
+          <div><div class="test-name">María G.</div><div class="test-service">Fisioterapia · 3 meses</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
+          <div class="test-stars">★★★★★</div>
+        </div>
+        <p class="test-quote">"Durante mi embarazo tuve mucho miedo de hacer ejercicio. El equipo de Re3Move me acompañó con total seguridad. Me sentí en las mejores manos."</p>
+        <div class="test-author">
+          <div class="test-avatar" style="background:linear-gradient(135deg,#be9b6d,#9b7b4d)">AF</div>
+          <div><div class="test-name">Ana F.</div><div class="test-service">Embarazo · 6 meses</div></div>
+        </div>
+      </div>
+      <div class="test-card">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
+          <div class="test-stars">★★★★★</div>
+        </div>
+        <p class="test-quote">"Después de una lesión de rodilla, volví al deporte más fuerte que antes. El trabajo de readaptación fue increíble — nada de recuperaciones a medias."</p>
+        <div class="test-author">
+          <div class="test-avatar" style="background:linear-gradient(135deg,#6dbe9b,#4d9b7b)">PS</div>
+          <div><div class="test-name">Pedro S.</div><div class="test-service">Readaptación deportiva</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div>
+          <div class="footer-brand-name">re³MOVE</div>
+          <div class="footer-tagline">Recuperación · Readaptación · Rendimiento</div>
+          <p class="footer-desc">Clínica especializada en fisioterapia, entrenamiento personalizado, suelo pélvico y acompañamiento en el embarazo. Mallorca.</p>
+        </div>
+        <div>
+          <div class="footer-col-title">Servicios</div>
+          <div class="footer-links">
+            <a href="/fisioterapia-avanzada.html">Fisioterapia avanzada</a>
+            <a href="/mujer.html#suelo-pelvico">Suelo pélvico</a>
+            <a href="/mujer.html#embarazo">Embarazo</a>
+            <a href="/clinica-deportiva.html">Clínica deportiva</a>
+          </div>
+        </div>
+        <div>
+          <div class="footer-col-title">Contacto</div>
+          <div class="footer-links">
+            <a href="mailto:re3movecenter@gmail.com">re3movecenter@gmail.com</a>
+            <a href="tel:+34620326447">+34 620 32 64 47</a>
+            <a href="#ubicacion">Cómo llegar</a>
+            <a href="https://www.instagram.com/re3move/" target="_blank">@re3move</a>
+          </div>
+        </div>
+      </div>
+      <hr class="footer-divider">
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 Re3Move. Todos los derechos reservados.</span>
+        <div class="footer-socials">
+          <a href="https://www.instagram.com/re3move/" target="_blank" class="soc" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://wa.me/34620326447" target="_blank" class="soc" aria-label="WhatsApp"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+          <a href="mailto:re3movecenter@gmail.com" class="soc" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a href="https://wa.me/34620326447" class="wa-float" target="_blank" aria-label="WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
+});
+const mobileMenu = document.getElementById('mobileMenu');
+document.getElementById('hamburger').addEventListener('click', (e) => {
+  e.stopPropagation();
+  mobileMenu.classList.toggle('open');
+});
+document.addEventListener('click', (e) => {
+  if (!mobileMenu.contains(e.target)) mobileMenu.classList.remove('open');
+});
+document.querySelectorAll('.mobile-menu a').forEach(el => {
+  el.addEventListener('click', () => mobileMenu.classList.remove('open'));
+});
+document.querySelectorAll('.mm-group-label').forEach(el => {
+  el.addEventListener('click', (e) => {
+    e.stopPropagation();
+    el.parentElement.classList.toggle('open');
+  });
+});
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.service-card, .mujer-card, .method-step, .team-card, .test-card, .loc-item, .ch-btn-big').forEach(el => {
+  el.style.opacity = '0'; el.style.transform = 'translateY(18px)';
+  el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+  obs.observe(el);
+});
+</script>
+</body>
+</html>

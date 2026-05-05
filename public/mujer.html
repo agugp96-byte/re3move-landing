@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mujer — Suelo pélvico &amp; embarazo — Re3Move Palma</title>
+<meta name="description" content="Fisioterapia especializada en salud de la mujer en Palma de Mallorca. Suelo pélvico, embarazo y posparto con Judith Iglesias, especialista con dos másteres.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mujer — Suelo pélvico &amp; embarazo — Re3Move">
+<meta property="og:description" content="Suelo pélvico, embarazo y posparto atendidos por Judith Iglesias — fisioterapeuta especialista con dos másteres en salud pélvica y obstétrica. Palma de Mallorca.">
+<meta property="og:image" content="/assets/photos/clinic-07-judith-pelvis.jpeg">
+<meta property="og:locale" content="es_ES">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://re3move.es/mujer">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/icon.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="/assets/styles.css">
+
+<style>
+/* Hero */
+.hero { padding: 80px 0 64px; background: linear-gradient(180deg, var(--green-dim) 0%, #fff 100%); }
+.hero-inner { max-width: 920px; margin: 0 auto; text-align: center; }
+.hero-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--green); background: #fff; border: 1px solid rgba(45,122,79,0.25); padding: 5px 12px; border-radius: 20px; margin-bottom: 22px; }
+.hero-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-b); }
+.hero h1 { font-family: var(--font-h); font-weight: 800; font-size: clamp(44px, 6.4vw, 76px); line-height: 1; letter-spacing: -0.045em; color: var(--ink); margin-bottom: 24px; text-wrap: balance; }
+.hero h1 em { font-style: normal; color: var(--green); }
+.hero-lead { font-size: 19px; color: var(--muted); line-height: 1.6; max-width: 620px; margin: 0 auto 28px; }
+.hero-disciplines { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+.hero-disc { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: #fff; border: 1px solid var(--border); border-radius: 100px; font-size: 13px; color: var(--text); transition: all 0.15s; }
+.hero-disc:hover { border-color: var(--green); color: var(--green); }
+.hero-disc-num { font-family: var(--font-k); font-weight: 700; color: var(--green); font-size: 12px; }
+
+.hero-phases { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 40px; }
+.phase { position: relative; aspect-ratio: 4/5; border-radius: 14px; overflow: hidden; box-shadow: 0 16px 36px rgba(13,17,15,0.14); }
+.phase img { width: 100%; height: 100%; object-fit: cover; }
+.phase-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 50%, rgba(13,17,15,0.78) 100%); display: flex; align-items: flex-end; padding: 24px; }
+.phase-label { color: #fff; }
+.phase-label-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 4px; }
+.phase-label-title { font-family: var(--font-h); font-weight: 800; font-size: 22px; letter-spacing: -0.4px; }
+
+/* Section eyebrow override */
+.section-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--green); margin-bottom: 14px; }
+
+/* Discipline marker */
+.disc { padding: 96px 0; scroll-margin-top: 80px; }
+.disc-marker { display: flex; align-items: center; gap: 16px; margin-bottom: 32px; }
+.disc-marker-num { font-family: var(--font-k); font-weight: 800; font-size: 14px; color: var(--green); letter-spacing: 1.2px; }
+.disc-marker-line { flex: 1; height: 1px; background: var(--border); }
+.disc-marker-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--faint); }
+
+.disc-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 56px; }
+.disc-intro-img { aspect-ratio: 4/5; border-radius: 16px; overflow: hidden; box-shadow: 0 16px 36px rgba(13,17,15,0.12); }
+.disc-intro-img img { width: 100%; height: 100%; object-fit: cover; }
+.disc-intro-img.right { order: 2; }
+.disc h2 { font-family: var(--font-h); font-weight: 800; font-size: clamp(32px, 4vw, 48px); line-height: 1.05; letter-spacing: -0.035em; color: var(--ink); margin-bottom: 18px; text-wrap: balance; }
+.disc h2 em { font-style: normal; color: var(--green); }
+.disc-lead { font-size: 17px; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+.disc-bullets { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+.disc-bullets li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; color: var(--text); }
+.disc-bullets li::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--green-b); margin-top: 9px; flex-shrink: 0; }
+.disc-actions { display: flex; gap: 12px; margin-top: 28px; flex-wrap: wrap; }
+
+/* Conditions grid */
+.tratamos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.condition { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px; display: flex; gap: 14px; align-items: flex-start; transition: border-color 0.15s, transform 0.15s; }
+.condition:hover { border-color: var(--green); transform: translateY(-2px); }
+.condition-icon { width: 38px; height: 38px; border-radius: 10px; background: var(--green-dim); color: var(--green); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.condition-num { font-family: var(--font-k); font-size: 24px; font-weight: 700; color: var(--green); line-height: 1; flex-shrink: 0; min-width: 32px; }
+.condition-title { font-family: var(--font-h); font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 4px; letter-spacing: -0.2px; }
+.condition-desc { font-size: 14px; color: var(--muted); line-height: 1.55; }
+
+.disc-pelvico { background: var(--bg); border-top: 1px solid var(--border); }
+.disc-pelvico .condition { background: #fff; }
+.disc-embarazo { background: #fff; border-top: 1px solid var(--border); }
+.disc-embarazo .condition { background: var(--bg); }
+
+/* Steps (valoración) */
+.valoracion-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 56px; align-items: start; margin-top: 64px; }
+.steps { display: flex; flex-direction: column; gap: 0; }
+.step { display: grid; grid-template-columns: 56px 1fr; gap: 20px; padding: 20px 0; border-top: 1px solid var(--border); }
+.step:first-child { border-top: none; padding-top: 0; }
+.step-num { font-family: var(--font-k); font-weight: 800; font-size: 32px; color: var(--green); line-height: 1; padding-top: 4px; }
+.step h4 { font-family: var(--font-h); font-size: 17px; font-weight: 700; color: var(--ink); margin-bottom: 6px; letter-spacing: -0.2px; }
+.step p { font-size: 14px; color: var(--muted); line-height: 1.55; }
+.steps-img { aspect-ratio: 3/4; border-radius: 14px; overflow: hidden; }
+.steps-img img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Formato */
+.formato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 32px; }
+.formato-card { background: #fff; border: 1px solid var(--border); border-radius: 14px; padding: 24px; display: flex; gap: 16px; align-items: flex-start; }
+.formato-card-icon { width: 44px; height: 44px; border-radius: 10px; background: var(--green-dim); color: var(--green); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.formato-card-text strong { display: block; font-family: var(--font-h); font-weight: 700; font-size: 16px; color: var(--ink); margin-bottom: 4px; letter-spacing: -0.2px; }
+.formato-card-text span { font-size: 13px; color: var(--muted); line-height: 1.5; }
+
+/* Quote */
+.quote { background: var(--logo-bg); color: #fff; padding: 80px 0; text-align: center; }
+.quote-mark { font-family: var(--font-h); font-size: 72px; line-height: 0.6; color: var(--green-b); margin-bottom: 16px; }
+.quote-text { font-family: var(--font-h); font-weight: 700; font-size: clamp(22px, 3vw, 32px); line-height: 1.3; letter-spacing: -0.02em; max-width: 800px; margin: 0 auto; text-wrap: balance; }
+.quote-text em { font-style: normal; color: var(--green-b); }
+
+/* Equipo */
+.equipo { padding: 96px 0; background: var(--bg); border-top: 1px solid var(--border); }
+.equipo-card { display: grid; grid-template-columns: 280px 1fr; gap: 48px; max-width: 920px; margin: 0 auto; align-items: center; background: #fff; border-radius: 20px; padding: 36px; border: 1px solid var(--border); }
+.equipo-img { aspect-ratio: 1/1; border-radius: 14px; overflow: hidden; }
+.equipo-img img { width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+.equipo-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--green); margin-bottom: 10px; }
+.equipo-name { font-family: var(--font-h); font-weight: 800; font-size: 32px; letter-spacing: -0.03em; color: var(--ink); margin-bottom: 6px; }
+.equipo-role { font-size: 15px; color: var(--green); font-weight: 600; margin-bottom: 18px; }
+.equipo-bio { font-size: 15px; color: var(--muted); line-height: 1.7; }
+.equipo-bio strong { color: var(--ink); font-weight: 600; }
+
+/* Crosslink */
+.crosslink { padding: 72px 0; background: #fff; border-top: 1px solid var(--border); }
+.crosslink-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.cl-card { display: block; padding: 24px; border: 1px solid var(--border); border-radius: 14px; transition: all 0.15s; }
+.cl-card:hover { border-color: var(--green); transform: translateY(-2px); }
+.cl-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--green); margin-bottom: 8px; }
+.cl-title { font-family: var(--font-h); font-weight: 700; font-size: 18px; color: var(--ink); margin-bottom: 6px; letter-spacing: -0.2px; }
+.cl-desc { font-size: 14px; color: var(--muted); line-height: 1.55; }
+.cl-arrow { display: inline-block; margin-top: 12px; font-size: 13px; color: var(--green); font-weight: 600; }
+
+/* CTA footer */
+.cta-footer { padding: 96px 0; background: var(--bg); text-align: center; border-top: 1px solid var(--border); }
+.cta-footer h2 { font-family: var(--font-h); font-weight: 800; font-size: clamp(32px, 4vw, 48px); letter-spacing: -0.035em; color: var(--ink); margin-bottom: 16px; text-wrap: balance; }
+.cta-footer p { font-size: 17px; color: var(--muted); margin-bottom: 32px; }
+
+.tratamos-title { font-family: var(--font-h); font-weight: 800; font-size: clamp(24px,3vw,32px); letter-spacing: -0.03em; color: var(--ink); margin-bottom: 14px; }
+.tratamos-lead { font-size: 16px; color: var(--muted); max-width: 560px; margin-bottom: 36px; }
+
+@media (max-width: 880px) {
+  .hero-phases { grid-template-columns: 1fr; }
+  .disc-intro, .valoracion-grid, .equipo-card { grid-template-columns: 1fr; gap: 32px; }
+  .disc-intro-img.right { order: 0; }
+  .tratamos-grid, .formato-grid, .crosslink-grid { grid-template-columns: 1fr; }
+  .equipo-card { padding: 24px; }
+}
+@media (max-width: 560px) {
+  .disc { padding: 64px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- Top navigation -->
+<nav class="nav" id="nav">
+  <div class="container nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark">R3</div>
+      <span class="nav-logo-name">re³MOVE</span>
+    </a>
+
+    <div class="nav-links">
+      <div class="nav-dd">
+        <span class="nav-dd-label">
+          Servicios
+          <svg class="nav-dd-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <div class="nav-dd-menu nav-dd-menu--wide">
+          <div class="nav-dd-section">Pilares clínicos</div>
+          <a href="/clinica-deportiva.html" class="nav-dd-feature">
+            Clínica deportiva
+            <small>Fisio de élite + readaptación</small>
+          </a>
+          <a href="/fisioterapia-avanzada.html">
+            Fisioterapia avanzada
+            <small>Ecografía, EPI, neuromodulación…</small>
+          </a>
+          <a href="/mujer.html">
+            Mujer
+            <small>Suelo pélvico, embarazo, postparto</small>
+          </a>
+        </div>
+      </div>
+      <a href="/#metodologia">Método</a>
+      <a href="/#equipo">Equipo</a>
+      <a href="/#ubicacion">Ubicación</a>
+    </div>
+
+    <div class="nav-right">
+      <a href="https://wa.me/34620326447" target="_blank" class="nav-cta">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Pedir cita
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Menú de navegación">
+  <div class="mm-group" id="mm-servicios">
+    <div class="mm-group-label">
+      Servicios
+      <svg class="mm-caret" viewBox="0 0 10 6" fill="none"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="mm-submenu"><div>
+      <a href="/clinica-deportiva.html">Clínica deportiva<small>Fisio de élite + readaptación</small></a>
+      <a href="/fisioterapia-avanzada.html">Fisioterapia avanzada<small>Ecografía, EPI, neuromodulación…</small></a>
+      <a href="/mujer.html">Mujer<small>Suelo pélvico, embarazo, postparto</small></a>
+    </div></div>
+  </div>
+  <a href="/#metodologia">Método</a>
+  <a href="/#equipo">Equipo</a>
+  <a href="/#ubicacion">Ubicación</a>
+  <a href="https://wa.me/34620326447" target="_blank" class="mm-cta">Pedir cita</a>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-tag"><span class="hero-tag-dot"></span>Salud de la mujer</div>
+      <h1>Una fisioterapia <em>pensada para ti.</em></h1>
+      <p class="hero-lead">Suelo pélvico y embarazo / posparto, atendidos por <strong style="color:var(--ink);">Judith Iglesias</strong> — fisioterapeuta con dos másteres en salud pélvica y obstétrica. Mismo criterio clínico, distintas etapas.</p>
+      <div class="hero-disciplines">
+        <a href="#suelo-pelvico" class="hero-disc"><span class="hero-disc-num">01</span> Suelo pélvico</a>
+        <a href="#embarazo" class="hero-disc"><span class="hero-disc-num">02</span> Embarazo &amp; posparto</a>
+      </div>
+    </div>
+    <div class="hero-phases">
+      <a href="#suelo-pelvico" class="phase">
+        <img src="/assets/photos/clinic-03-ecografia.jpeg" alt="Suelo pélvico — fisioterapia uroginecológica" loading="lazy">
+        <div class="phase-overlay">
+          <div class="phase-label">
+            <div class="phase-label-eyebrow">Disciplina 01</div>
+            <div class="phase-label-title">Suelo pélvico</div>
+          </div>
+        </div>
+      </a>
+      <a href="#embarazo" class="phase">
+        <img src="/assets/photos/clinic-05-pregnancy-side.jpeg" alt="Embarazo y posparto" loading="lazy">
+        <div class="phase-overlay">
+          <div class="phase-label">
+            <div class="phase-label-eyebrow">Disciplina 02</div>
+            <div class="phase-label-title">Embarazo &amp; posparto</div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     DISCIPLINE 01 — SUELO PÉLVICO
+     ═══════════════════════════════════════════════════ -->
+<section class="disc disc-pelvico" id="suelo-pelvico">
+  <div class="container">
+    <div class="disc-marker">
+      <span class="disc-marker-num">01</span>
+      <span class="disc-marker-line"></span>
+      <span class="disc-marker-tag">Disciplina · Fisioterapia uroginecológica</span>
+    </div>
+    <div class="disc-intro">
+      <div>
+        <h2>Suelo pélvico, <em>con evidencia.</em></h2>
+        <p class="disc-lead">Evaluación funcional y tratamiento especializado de incontinencia, dolor pélvico crónico, prolapsos y cicatrices. Porque el suelo pélvico importa — y tiene solución.</p>
+        <ul class="disc-bullets">
+          <li>Valoración con ecografía funcional</li>
+          <li>Trabajo manual y ejercicios progresivos</li>
+          <li>Plan individualizado según etapa y síntomas</li>
+          <li>Sesiones individuales o clases grupales</li>
+        </ul>
+        <div class="disc-actions">
+          <a href="https://wa.me/34620326447" target="_blank" class="btn-primary">
+            Reservar valoración
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="disc-intro-img right">
+        <img src="/assets/photos/clinic-04-pelvis-model.jpeg" alt="Modelo anatómico de suelo pélvico" loading="lazy">
+      </div>
+    </div>
+
+    <div style="margin-top: 64px;">
+      <div class="section-eyebrow">Qué tratamos</div>
+      <h3 class="tratamos-title">El suelo pélvico es muscular y fascial. Cuando falla, hay solución.</h3>
+      <p class="tratamos-lead">Funciones clave en la continencia, la sexualidad y la transmisión de presiones abdominales. Estos son los cuadros que vemos cada semana.</p>
+      <div class="tratamos-grid">
+        <div class="condition">
+          <div class="condition-num">01</div>
+          <div>
+            <div class="condition-title">Incontinencia urinaria</div>
+            <div class="condition-desc">De esfuerzo, urgencia o mixta. Valoración funcional + plan progresivo.</div>
+          </div>
+        </div>
+        <div class="condition">
+          <div class="condition-num">02</div>
+          <div>
+            <div class="condition-title">Dolor pélvico crónico y dispareunia</div>
+            <div class="condition-desc">Abordaje multifactorial: tejido, sistema nervioso y movimiento.</div>
+          </div>
+        </div>
+        <div class="condition">
+          <div class="condition-num">03</div>
+          <div>
+            <div class="condition-title">Prolapsos de órganos pélvicos</div>
+            <div class="condition-desc">Estabilización funcional, manejo postural y trabajo activo.</div>
+          </div>
+        </div>
+        <div class="condition">
+          <div class="condition-num">04</div>
+          <div>
+            <div class="condition-title">Cicatrices perineales y abdominales</div>
+            <div class="condition-desc">Episiotomía, cesárea — recuperación de movilidad y sensibilidad.</div>
+          </div>
+        </div>
+        <div class="condition">
+          <div class="condition-num">05</div>
+          <div>
+            <div class="condition-title">Disfunciones sexuales musculoesqueléticas</div>
+            <div class="condition-desc">Origen tisular, postural o de coordinación — tratamiento dirigido.</div>
+          </div>
+        </div>
+        <div class="condition">
+          <div class="condition-num">06</div>
+          <div>
+            <div class="condition-title">Preparación al parto</div>
+            <div class="condition-desc">Masaje perineal, movilidad pélvica y gestión del esfuerzo.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="formato-grid">
+      <div class="formato-card">
+        <div class="formato-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="formato-card-text">
+          <strong>Sesiones individuales</strong>
+          <span>1 a 1 con valoración ecográfica · 60 min</span>
+        </div>
+      </div>
+      <div class="formato-card">
+        <div class="formato-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="formato-card-text">
+          <strong>Clases grupales de suelo pélvico</strong>
+          <span>Grupo reducido · entrenamiento dirigido</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════
+     DISCIPLINE 02 — EMBARAZO & POSPARTO
+     ═══════════════════════════════════════════════════ -->
+<section class="disc disc-embarazo" id="embarazo">
+  <div class="container">
+    <div class="disc-marker">
+      <span class="disc-marker-num">02</span>
+      <span class="disc-marker-line"></span>
+      <span class="disc-marker-tag">Disciplina · Fisioterapia obstétrica</span>
+    </div>
+    <div class="disc-intro">
+      <div class="disc-intro-img">
+        <img src="/assets/photos/clinic-06-prenatal-class.jpeg" alt="Sesión prenatal con paciente embarazada" loading="lazy">
+      </div>
+      <div>
+        <h2>Embarazo y posparto, <em>cada etapa atendida.</em></h2>
+        <p class="disc-lead">Fisioterapia basada en evidencia durante el embarazo, preparación al parto y recuperación posparto. Cada etapa tiene sus necesidades — aquí las atendemos todas.</p>
+        <ul class="disc-bullets">
+          <li>Valoración adaptada a la etapa gestacional o puerperal</li>
+          <li>Ecografía de suelo pélvico y diástasis abdominal</li>
+          <li>Plan que evoluciona semana a semana</li>
+          <li>Clases grupales preparto y posparto</li>
+        </ul>
+        <div class="disc-actions">
+          <a href="https://wa.me/34620326447" target="_blank" class="btn-primary">
+            Reservar valoración
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 64px;">
+      <div class="section-eyebrow">Qué tratamos</div>
+      <h3 class="tratamos-title">El embarazo no es una patología — pero sí necesita atención especializada.</h3>
+      <p class="tratamos-lead">Cambios biomecánicos, hormonales y posturales que requieren un seguimiento adaptado a cada semana.</p>
+      <div class="tratamos-grid">
+        <div class="condition">
+          <div class="condition-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M5 8h14M5 16h14"/></svg>
+          </div>
+          <div>
+            <div class="condition-title">Dolor lumbopélvico y pubalgia</div>
+            <div class="condition-desc">Estabilización pélvica y trabajo postural durante la gestación.</div>
+          </div>
+        </div>
+        <div class="condition">
+          <div class="condition-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+          </div>
+          <div>
+            <div class="condition-title">Suelo pélvico durante el embarazo</div>
+            <div class="condition-desc">Disfunciones gestacionales — manejo y prevención.</div>
+          </div>
+        </div>
+        <div class="condition">
+          <div class="condition-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18M15 3v18"/></svg>
+          </div>
+          <div>
+            <div class="condition-title">Diástasis abdominal</div>
+            <div class="condition-desc">Control ecográfico y tratamiento progresivo.</div>
+          </div>
+        </div>
+        <div class="condition">
+          <div class="condition-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12c2-2 4-2 6 0s4 2 6 0"/><path d="M5 18c2-2 4-2 6 0s4 2 6 0"/><path d="M5 6c2-2 4-2 6 0s4 2 6 0"/></svg>
+          </div>
+          <div>
+            <div class="condition-title">Pseudociatalgia</div>
+            <div class="condition-desc">Atrapamiento del nervio ciático — alivio y reeducación.</div>
+          </div>
+        </div>
+        <div class="condition">
+          <div class="condition-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+          </div>
+          <div>
+            <div class="condition-title">Preparación al parto</div>
+            <div class="condition-desc">Masaje perineal, movilidad pélvica, gestión del esfuerzo.</div>
+          </div>
+        </div>
+        <div class="condition">
+          <div class="condition-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <div>
+            <div class="condition-title">Recuperación posparto</div>
+            <div class="condition-desc">Cesárea, episiotomía y reintegración funcional completa.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="valoracion-grid">
+      <div class="steps-img">
+        <img src="/assets/photos/clinic-08-postpartum-floor.jpeg" alt="Recuperación posparto en clínica" loading="lazy">
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <div>
+            <h4>Entrevista clínica</h4>
+            <p>Historia obstétrica, síntomas actuales, expectativas y objetivos para esta etapa.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <div>
+            <h4>Exploración física adaptada</h4>
+            <p>Adaptada a la etapa gestacional o puerperal. Postura, palpación y tests funcionales.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <div>
+            <h4>Ecografía funcional</h4>
+            <p>Suelo pélvico y musculatura abdominal — diástasis, activación y tono.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <div>
+            <h4>Plan semana a semana</h4>
+            <p>El plan evoluciona contigo. Ajustamos sesiones, ejercicios y enfoque según vas avanzando.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Quote -->
+<section class="quote">
+  <div class="container">
+    <div class="quote-mark">"</div>
+    <p class="quote-text">La fisioterapia en estas etapas no es un complemento — <em>es parte del cuidado esencial de la mujer.</em></p>
+  </div>
+</section>
+
+<!-- Equipo -->
+<section class="equipo" id="equipo">
+  <div class="container">
+    <div style="text-align:center; margin: 0 auto 48px; max-width:600px;">
+      <div class="section-eyebrow">Quién te atiende</div>
+      <h2 class="section-title">Especialista en salud de la mujer.</h2>
+    </div>
+    <div class="equipo-card">
+      <div class="equipo-img">
+        <img src="/assets/photos/clinic-07-judith-pelvis.jpeg" alt="Judith Iglesias, fisioterapeuta especialista en suelo pélvico" loading="lazy">
+      </div>
+      <div>
+        <div class="equipo-eyebrow">Fisioterapeuta</div>
+        <h3 class="equipo-name">Judith Iglesias</h3>
+        <div class="equipo-role">Especialista en suelo pélvico y salud de la mujer</div>
+        <p class="equipo-bio">Graduada en Fisioterapia con dos másteres de especialización: <strong>Salud Pélvica y Rendimiento en Atletas Femeninas</strong>, y <strong>Fisioterapia de Suelo Pélvico en Urología, Ginecología y Obstetricia</strong>. Trabaja con mujeres en todas las etapas de su vida — desde la gestación hasta el deporte de alto rendimiento — con un enfoque basado en evidencia y atención centrada en la persona.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Crosslink -->
+<section class="crosslink">
+  <div class="container">
+    <div style="margin-bottom:32px;">
+      <div class="section-eyebrow">Otros servicios</div>
+      <h2 class="section-title" style="font-size:28px;">Mira también</h2>
+    </div>
+    <div class="crosslink-grid">
+      <a href="/fisioterapia-avanzada.html" class="cl-card">
+        <div class="cl-eyebrow">Clínica</div>
+        <div class="cl-title">Recuperación &amp; fisioterapia avanzada</div>
+        <div class="cl-desc">Fisioterapia para lesiones agudas, dolor crónico, postoperatorios y tecnologías avanzadas.</div>
+        <span class="cl-arrow">Ver más →</span>
+      </a>
+      <a href="/clinica-deportiva.html" class="cl-card">
+        <div class="cl-eyebrow">Deportiva</div>
+        <div class="cl-title">Clínica deportiva</div>
+        <div class="cl-desc">Readaptación tras lesión, entrenamiento de rendimiento y programación online.</div>
+        <span class="cl-arrow">Ver más →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA footer -->
+<section class="cta-footer" id="cita">
+  <div class="container">
+    <h2>Cuéntanos tu caso.</h2>
+    <p>Te respondemos por WhatsApp y agendamos tu primera valoración.</p>
+    <a href="https://wa.me/34620326447" target="_blank" class="btn-wa">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      Pedir cita por WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- Full footer -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-name">re³MOVE</div>
+        <div class="footer-tagline">Centro de fisioterapia · Palma de Mallorca</div>
+        <p class="footer-desc">Clínica de fisioterapia y readaptación física. Deportiva, avanzada y salud de la mujer. Carrer George Orwell 1, Palma.</p>
+      </div>
+      <div>
+        <div class="footer-col-title">Servicios</div>
+        <div class="footer-links">
+          <a href="/clinica-deportiva.html">Clínica deportiva</a>
+          <a href="/fisioterapia-avanzada.html">Fisioterapia avanzada</a>
+          <a href="/mujer.html">Mujer</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Contacto</div>
+        <div class="footer-links">
+          <a href="https://wa.me/34620326447" target="_blank">WhatsApp</a>
+          <a href="mailto:re3movecenter@gmail.com">re3movecenter@gmail.com</a>
+          <a href="/#ubicacion">Cómo llegar</a>
+        </div>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Re3Move. Todos los derechos reservados.</span>
+      <div class="footer-socials">
+        <a href="https://www.instagram.com/re3move/" target="_blank" class="soc" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WhatsApp float -->
+<a href="https://wa.me/34620326447" target="_blank" class="wa-float" aria-label="Contactar por WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script>
+// Nav scroll shadow
+(function() {
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function() {
+    nav.classList.toggle('scrolled', window.scrollY > 10);
+  }, {passive: true});
+})();
+
+// Mobile menu
+(function() {
+  var btn = document.getElementById('hamburger');
+  var menu = document.getElementById('mobile-menu');
+  btn.addEventListener('click', function() {
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+  document.addEventListener('click', function(e) {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      menu.classList.remove('open');
+      btn.setAttribute('aria-expanded', false);
+    }
+  });
+  document.querySelectorAll('.mm-group-label').forEach(function(label) {
+    label.addEventListener('click', function() {
+      label.closest('.mm-group').classList.toggle('open');
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
