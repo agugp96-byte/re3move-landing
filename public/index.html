@@ -13,8 +13,18 @@
 <meta property="og:description" content="Clínica de Recuperación, Readaptación y Rendimiento. Fisioterapia especializada, entrenamiento y suelo pélvico en Mallorca.">
 <meta property="og:image" content="/assets/photos/clinic-02-physio-baby.jpeg">
 <meta property="og:locale" content="es_ES">
+<meta property="og:url" content="https://re3move.es/">
+<meta property="og:site_name" content="Re3Move">
+<meta property="og:image:alt" content="Re3Move — clínica de fisioterapia en Palma de Mallorca">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Re3Move — Clínica de Fisioterapia en Mallorca">
+<meta name="twitter:description" content="Clínica de Recuperación, Readaptación y Rendimiento. Fisioterapia especializada, entrenamiento y suelo pélvico en Mallorca.">
+<meta name="twitter:image" content="/assets/photos/clinic-02-physio-baby.jpeg">
+<meta name="theme-color" content="#3a5748">
+<meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Barlow+Condensed:wght@500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/styles.css">
 <script type="application/ld+json">
 {
@@ -31,7 +41,11 @@
   "telephone": "+34620326447",
   "email": "re3movecenter@gmail.com",
   "url": "https://re3move.es",
-  "openingHours": "Mo-Fr 08:00-21:00"
+  "openingHours": "Mo-Fr 08:00-21:00",
+  "image": "https://re3move.es/assets/photos/clinic-02-physio-baby.jpeg",
+  "areaServed": "Palma de Mallorca",
+  "sameAs": ["https://www.instagram.com/re3move/"],
+  "hasMap": "https://maps.google.com/maps?q=Carrer%20George%20Orwell%201%2C%2007002%20Palma%2C%20Illes%20Balears"
 }
 </script>
 <style>
@@ -61,7 +75,7 @@
 .service-card { border-radius: 16px; overflow: hidden; position: relative; height: 380px; cursor: default; transition: transform 0.2s; display: block; }
 .service-card:hover { transform: translateY(-3px); }
 .service-card:hover .service-overlay { background: linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.3) 55%, rgba(0,0,0,0.1) 100%); }
-.service-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.4s ease; }
+.service-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.4s ease; display: block; }
 .service-card:hover .service-bg { transform: scale(1.04); }
 .service-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.25) 55%, rgba(0,0,0,0.05) 100%); transition: background 0.3s; }
 .service-body { position: absolute; bottom: 0; left: 0; right: 0; padding: 24px 26px; z-index: 2; }
@@ -77,7 +91,7 @@
 .mujer-card { position: relative; height: 320px; border-radius: 16px; overflow: hidden; display: block; transition: transform 0.2s; }
 .mujer-card:hover { transform: translateY(-3px); }
 .mujer-card:hover .mujer-bg { transform: scale(1.04); }
-.mujer-bg { position: absolute; inset: 0; background-size: cover; background-position: center; transition: transform 0.4s ease; }
+.mujer-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 0.4s ease; display: block; }
 .mujer-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(58,87,72,0.92) 0%, rgba(58,87,72,0.5) 50%, rgba(58,87,72,0.15) 100%); }
 .mujer-body { position: absolute; bottom: 0; left: 0; right: 0; padding: 28px 30px; z-index: 2; }
 .mujer-eyebrow { font-family: var(--font-b); font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--green-b); margin-bottom: 8px; }
@@ -149,14 +163,6 @@
 /* ══════════════════ TESTIMONIALS ═════════════════════ */
 .testimonials { background: var(--bg); }
 .test-header { margin-bottom: 52px; }
-.test-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.test-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 28px 26px; }
-.test-stars { display: flex; gap: 3px; margin-bottom: 14px; color: #d4a017; font-size: 13px; }
-.test-quote { font-size: 14px; color: var(--text); line-height: 1.75; margin-bottom: 20px; font-style: italic; }
-.test-author { display: flex; align-items: center; gap: 10px; }
-.test-avatar { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-h); font-weight: 800; font-size: 12px; color: #fff; flex-shrink: 0; }
-.test-name { font-size: 13px; font-weight: 600; color: var(--ink); }
-.test-service { font-size: 11px; color: var(--faint); }
 
 /* ══════════════════ RESPONSIVE ═══════════════════════ */
 @media (max-width: 900px) {
@@ -164,16 +170,16 @@
   .mujer-grid { grid-template-columns: 1fr; }
   .method-steps { grid-template-columns: 1fr; }
   .team-grid { grid-template-columns: repeat(2, 1fr); }
-  .test-grid { grid-template-columns: 1fr 1fr; }
   .location-inner { grid-template-columns: 1fr; }
   .contact-channels { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
-  .team-grid, .test-grid { grid-template-columns: 1fr; }
+  .team-grid { grid-template-columns: 1fr; }
 }
 </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Saltar al contenido</a>
 
 <!-- NAV -->
 <nav class="nav" id="nav">
@@ -185,8 +191,8 @@
       </a>
       <div class="nav-links">
         <div class="nav-dd">
-          <span class="nav-dd-label">Fisioterapia avanzada
-            <svg class="nav-dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>
+          <span class="nav-dd-label" tabindex="0" role="button">Fisioterapia avanzada
+            <svg class="nav-dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 4.5l3 3 3-3"/></svg>
           </span>
           <div class="nav-dd-menu nav-dd-menu--wide">
             <a href="/fisioterapia-avanzada.html" class="nav-dd-feature">Recuperación<small>Fisioterapia &amp; postoperatorios</small></a>
@@ -203,8 +209,8 @@
           </div>
         </div>
         <div class="nav-dd">
-          <span class="nav-dd-label">Clínica deportiva
-            <svg class="nav-dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>
+          <span class="nav-dd-label" tabindex="0" role="button">Clínica deportiva
+            <svg class="nav-dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 4.5l3 3 3-3"/></svg>
           </span>
           <div class="nav-dd-menu">
             <a href="/clinica-deportiva.html#readaptacion">Readaptación<small>Vuelta al deporte tras lesión</small></a>
@@ -215,8 +221,8 @@
           </div>
         </div>
         <div class="nav-dd">
-          <span class="nav-dd-label">Mujer
-            <svg class="nav-dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>
+          <span class="nav-dd-label" tabindex="0" role="button">Mujer
+            <svg class="nav-dd-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 4.5l3 3 3-3"/></svg>
           </span>
           <div class="nav-dd-menu">
             <a href="/mujer.html#suelo-pelvico">Suelo pélvico<small>Fisioterapia uroginecológica</small></a>
@@ -230,11 +236,11 @@
       </div>
       <div class="nav-right">
         <a href="https://wa.me/34620326447" target="_blank" class="nav-cta">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
           Pedir cita
         </a>
-        <button class="hamburger" id="hamburger" aria-label="Menú">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false" aria-controls="mobileMenu">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
         </button>
       </div>
     </div>
@@ -245,7 +251,7 @@
 <div class="mobile-menu" id="mobileMenu">
   <div class="mm-group">
     <div class="mm-group-label">Fisioterapia avanzada
-      <svg class="mm-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>
+      <svg class="mm-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 4.5l3 3 3-3"/></svg>
     </div>
     <div class="mm-submenu"><div>
       <a href="/fisioterapia-avanzada.html">Recuperación<small>Fisioterapia &amp; postoperatorios</small></a>
@@ -259,7 +265,7 @@
   </div>
   <div class="mm-group">
     <div class="mm-group-label">Clínica deportiva
-      <svg class="mm-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>
+      <svg class="mm-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 4.5l3 3 3-3"/></svg>
     </div>
     <div class="mm-submenu"><div>
       <a href="/clinica-deportiva.html#readaptacion">Readaptación<small>Vuelta al deporte tras lesión</small></a>
@@ -269,7 +275,7 @@
   </div>
   <div class="mm-group">
     <div class="mm-group-label">Mujer
-      <svg class="mm-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 4.5l3 3 3-3"/></svg>
+      <svg class="mm-caret" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><path d="M3 4.5l3 3 3-3"/></svg>
     </div>
     <div class="mm-submenu"><div>
       <a href="/mujer.html#suelo-pelvico">Suelo pélvico<small>Fisioterapia uroginecológica</small></a>
@@ -280,6 +286,8 @@
   <a href="#contacto">Contacto</a>
   <a href="https://wa.me/34620326447" target="_blank" class="mm-cta">Pedir cita</a>
 </div>
+
+<main id="main">
 
 <!-- HERO -->
 <section class="hero" id="inicio">
@@ -297,7 +305,7 @@
       </p>
       <div class="hero-actions fade-up d3">
         <a href="https://wa.me/34620326447" target="_blank" class="btn-wa">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
           Pedir cita
         </a>
         <a href="#servicios" class="btn-ghost">Ver servicios</a>
@@ -325,7 +333,7 @@
     </div>
     <div class="services-grid">
       <a href="/fisioterapia-avanzada.html" class="service-card">
-        <div class="service-bg" style="background-image:url('/assets/photos/clinic-02-physio-baby.jpeg');"></div>
+        <img class="service-bg" src="/assets/photos/clinic-02-physio-baby.jpeg" alt="Fisioterapeuta tratando a una paciente en consulta" width="724" height="1086" decoding="async">
         <div class="service-overlay"></div>
         <div class="service-body">
           <div class="service-num">01 →</div>
@@ -335,7 +343,7 @@
         </div>
       </a>
       <a href="/clinica-deportiva.html" class="service-card">
-        <div class="service-bg" style="background-image:url('/assets/photos/training-03-step-up.png');" loading="lazy"></div>
+        <img class="service-bg" src="/assets/photos/training-03-step-up.png" alt="Ejercicio de readaptación con step" loading="lazy" width="1284" height="1610" decoding="async">
         <div class="service-overlay"></div>
         <div class="service-body">
           <div class="service-num">02 →</div>
@@ -345,7 +353,7 @@
         </div>
       </a>
       <a href="/clinica-deportiva.html#rendimiento" class="service-card">
-        <div class="service-bg" style="background-image:url('/assets/photos/training-01-stability.png');"></div>
+        <img class="service-bg" src="/assets/photos/training-01-stability.png" alt="Entrenamiento de estabilidad y fuerza" loading="lazy" width="1284" height="1735" decoding="async">
         <div class="service-overlay"></div>
         <div class="service-body">
           <div class="service-num">03 →</div>
@@ -370,7 +378,7 @@
     </div>
     <div class="mujer-grid">
       <a href="/mujer.html#suelo-pelvico" class="mujer-card">
-        <div class="mujer-bg" style="background-image:url('/assets/photos/clinic-03-ecografia.jpeg');"></div>
+        <img class="mujer-bg" src="/assets/photos/clinic-03-ecografia.jpeg" alt="Valoración con ecografía funcional de suelo pélvico" loading="lazy" width="1536" height="2048" decoding="async">
         <div class="mujer-overlay"></div>
         <div class="mujer-body">
           <div class="mujer-eyebrow">Fisioterapia uroginecológica</div>
@@ -380,7 +388,7 @@
         </div>
       </a>
       <a href="/mujer.html#embarazo" class="mujer-card">
-        <div class="mujer-bg" style="background-image:url('/assets/photos/clinic-05-pregnancy-side.jpeg');"></div>
+        <img class="mujer-bg" src="/assets/photos/clinic-05-pregnancy-side.jpeg" alt="Acompañamiento en embarazo y posparto" loading="lazy" width="1536" height="2048" decoding="async">
         <div class="mujer-overlay"></div>
         <div class="mujer-body">
           <div class="mujer-eyebrow">Fisioterapia obstétrica</div>
@@ -463,6 +471,29 @@
   </div>
 </section>
 
+<!-- TESTIMONIALS -->
+<section class="section testimonials" id="testimonios">
+  <div class="container">
+    <div class="test-header" style="text-align:center;max-width:560px;margin:0 auto 44px;">
+      <div class="tag">Opiniones</div>
+      <h2 class="section-title">Lo que dicen nuestros pacientes</h2>
+      <p class="section-sub" style="margin:14px auto 0;">Nuestras opiniones son reales y verificadas en Google. Léelas tú mismo o cuéntanos tu experiencia.</p>
+    </div>
+    <div class="reviews-panel">
+      <div class="reviews-logo">
+        <svg width="22" height="22" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+        <span>Reseñas verificadas en Google</span>
+      </div>
+      <h3>Pacientes reales, opiniones reales.</h3>
+      <p>Preferimos que escuches a quienes ya han pasado por la clínica. Lee las reseñas de Re3Move en Google — y si te hemos ayudado, deja la tuya.</p>
+      <div class="reviews-actions">
+        <a href="https://share.google/M8TjRifNDFBQa3QtY" target="_blank" rel="noopener" class="btn-primary">Leer reseñas en Google</a>
+        <a href="https://g.page/r/CYDagfJmTET-EBM/review" target="_blank" rel="noopener" class="btn-secondary">Dejar una reseña</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- LOCATION -->
 <section class="section location" id="ubicacion">
   <div class="container">
@@ -473,22 +504,22 @@
         <p class="section-sub" style="margin-bottom:40px;">Estamos en el centro de Mallorca, con fácil acceso y aparcamiento cercano.</p>
         <div class="location-items">
           <div class="loc-item">
-            <div class="loc-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div class="loc-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
             <div><div class="loc-label">Dirección</div><div class="loc-value">Carrer George Orwell 1 · Mallorca</div></div>
           </div>
           <div class="loc-item">
-            <div class="loc-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg></div>
+            <div class="loc-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/></svg></div>
             <div><div class="loc-label">Horario</div><div class="loc-value">Lunes a viernes · 8:00–21:00</div></div>
           </div>
           <div class="loc-item">
-            <div class="loc-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 15 16.91l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div class="loc-icon"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.58 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 15 16.91l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
             <div><div class="loc-label">Teléfono</div><div class="loc-value"><a href="tel:+34620326447">+34 620 32 64 47</a></div></div>
           </div>
         </div>
       </div>
       <div class="location-map">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3073.5!2d2.6505!3d39.5696!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1297913bde4b3da3%3A0x1!2sCarrer%20de%20George%20Orwell%2C%201%2C%2007002%20Palma%2C%20Illes%20Balears!5e0!3m2!1ses!2ses!4v1"
+          src="https://maps.google.com/maps?q=Carrer%20George%20Orwell%201%2C%2007002%20Palma%2C%20Illes%20Balears&output=embed"
           allowfullscreen=""
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"
@@ -513,7 +544,7 @@
       <div class="contact-channels">
         <a href="https://wa.me/34620326447" target="_blank" class="ch-btn-big wa">
           <div class="ch-icon" style="background:#dcfce7;">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="#25d366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#25d366" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
           </div>
           <div>
             <div class="ch-label">WhatsApp</div>
@@ -523,7 +554,7 @@
         </a>
         <a href="mailto:re3movecenter@gmail.com" class="ch-btn-big em">
           <div class="ch-icon" style="background:#f0faf4;">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#2d7a4f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
           </div>
           <div>
             <div class="ch-label">Email</div>
@@ -542,56 +573,7 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="section testimonials" id="testimonios">
-  <div class="container">
-    <div class="test-header" style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;">
-      <div>
-        <div class="tag">Testimonios</div>
-        <h2 class="section-title">Lo que dicen<br>nuestros pacientes</h2>
-      </div>
-      <a href="https://g.page/r/review" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;padding:10px 18px;background:#fff;border:1.5px solid #e5e7eb;border-radius:10px;text-decoration:none;transition:border-color 0.15s;flex-shrink:0;" onmouseover="this.style.borderColor='#4285F4'" onmouseout="this.style.borderColor='#e5e7eb'">
-        <svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-        <div>
-          <div style="font-size:12px;font-weight:700;color:#111827;line-height:1.2;">Google Reseñas</div>
-          <div style="font-size:11px;color:#6b7280;">Ver todas las opiniones</div>
-        </div>
-      </a>
-    </div>
-    <div class="test-grid">
-      <div class="test-card">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
-          <div class="test-stars">★★★★★</div>
-        </div>
-        <p class="test-quote">"Llevaba meses con dolor de espalda que no cedía con nada. En Re3Move me hicieron una valoración completa y en pocas semanas noté un cambio enorme."</p>
-        <div class="test-author">
-          <div class="test-avatar" style="background:linear-gradient(135deg,#be6d9b,#9b4d7b)">MG</div>
-          <div><div class="test-name">María G.</div><div class="test-service">Fisioterapia · 3 meses</div></div>
-        </div>
-      </div>
-      <div class="test-card">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
-          <div class="test-stars">★★★★★</div>
-        </div>
-        <p class="test-quote">"Durante mi embarazo tuve mucho miedo de hacer ejercicio. El equipo de Re3Move me acompañó con total seguridad. Me sentí en las mejores manos."</p>
-        <div class="test-author">
-          <div class="test-avatar" style="background:linear-gradient(135deg,#be9b6d,#9b7b4d)">AF</div>
-          <div><div class="test-name">Ana F.</div><div class="test-service">Embarazo · 6 meses</div></div>
-        </div>
-      </div>
-      <div class="test-card">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;">
-          <div class="test-stars">★★★★★</div>
-        </div>
-        <p class="test-quote">"Después de una lesión de rodilla, volví al deporte más fuerte que antes. El trabajo de readaptación fue increíble — nada de recuperaciones a medias."</p>
-        <div class="test-author">
-          <div class="test-avatar" style="background:linear-gradient(135deg,#6dbe9b,#4d9b7b)">PS</div>
-          <div><div class="test-name">Pedro S.</div><div class="test-service">Readaptación deportiva</div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+</main>
 
 <!-- FOOTER -->
 <footer class="footer">
@@ -626,9 +608,9 @@
       <div class="footer-bottom">
         <span class="footer-copy">© 2026 Re3Move. Todos los derechos reservados.</span>
         <div class="footer-socials">
-          <a href="https://www.instagram.com/re3move/" target="_blank" class="soc" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-          <a href="https://wa.me/34620326447" target="_blank" class="soc" aria-label="WhatsApp"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
-          <a href="mailto:re3movecenter@gmail.com" class="soc" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
+          <a href="https://www.instagram.com/re3move/" target="_blank" class="soc" aria-label="Instagram"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://wa.me/34620326447" target="_blank" class="soc" aria-label="WhatsApp"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg></a>
+          <a href="mailto:re3movecenter@gmail.com" class="soc" aria-label="Email"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></a>
         </div>
       </div>
     </div>
@@ -637,7 +619,7 @@
 
 <!-- WhatsApp float -->
 <a href="https://wa.me/34620326447" class="wa-float" target="_blank" aria-label="WhatsApp">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="white" aria-hidden="true" focusable="false"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
 </a>
 
 <script>
@@ -645,15 +627,23 @@ window.addEventListener('scroll', () => {
   document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 20);
 });
 const mobileMenu = document.getElementById('mobileMenu');
-document.getElementById('hamburger').addEventListener('click', (e) => {
+const hamburger = document.getElementById('hamburger');
+hamburger.addEventListener('click', (e) => {
   e.stopPropagation();
   mobileMenu.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', mobileMenu.classList.contains('open'));
 });
 document.addEventListener('click', (e) => {
-  if (!mobileMenu.contains(e.target)) mobileMenu.classList.remove('open');
+  if (!mobileMenu.contains(e.target)) {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  }
 });
 document.querySelectorAll('.mobile-menu a').forEach(el => {
-  el.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  el.addEventListener('click', () => {
+    mobileMenu.classList.remove('open');
+    hamburger.setAttribute('aria-expanded', 'false');
+  });
 });
 document.querySelectorAll('.mm-group-label').forEach(el => {
   el.addEventListener('click', (e) => {
@@ -667,7 +657,7 @@ const obs = new IntersectionObserver(entries => {
     if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
   });
 }, { threshold: 0.1 });
-document.querySelectorAll('.service-card, .mujer-card, .method-step, .team-card, .test-card, .loc-item, .ch-btn-big').forEach(el => {
+document.querySelectorAll('.service-card, .mujer-card, .method-step, .team-card, .reviews-panel, .loc-item, .ch-btn-big').forEach(el => {
   el.style.opacity = '0'; el.style.transform = 'translateY(18px)';
   el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
   obs.observe(el);
