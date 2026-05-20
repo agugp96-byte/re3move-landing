@@ -171,15 +171,10 @@ button { cursor: pointer; font-family: var(--font-b); }
   .fade-up { animation: none !important; opacity: 1 !important; transform: none !important; }
 }
 
-/* ── Panel de reseñas Google ── */
-.reviews-panel { max-width: 720px; margin: 0 auto; background: var(--white); border: 1px solid var(--border); border-radius: 20px; padding: 48px 40px; text-align: center; box-shadow: 0 8px 28px rgba(0,0,0,0.05); }
-.reviews-logo { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 18px; }
-.reviews-logo span { font-family: var(--font-h); font-weight: 800; font-size: 18px; color: var(--ink); letter-spacing: -0.02em; }
-.reviews-panel h3 { font-family: var(--font-h); font-weight: 800; font-size: clamp(22px,3vw,30px); color: var(--ink); letter-spacing: -0.02em; margin-bottom: 12px; }
-.reviews-panel p { font-size: 15px; color: var(--muted); line-height: 1.65; max-width: 460px; margin: 0 auto 28px; }
+/* ── CTAs de reseñas ── */
 .reviews-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .reviews-actions .btn-primary, .reviews-actions .btn-secondary { text-decoration: none; }
-@media (max-width: 560px) { .reviews-panel { padding: 36px 22px; } .reviews-actions { flex-direction: column; } .reviews-actions a { justify-content: center; } }
+@media (max-width: 560px) { .reviews-actions { flex-direction: column; } .reviews-actions a { justify-content: center; } }
 
 /* ── Item activo del menú ── */
 .mobile-menu a[aria-current="page"] { font-weight: 700; color: var(--ink); background: rgba(45,122,79,0.06); }
