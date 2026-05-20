@@ -57,9 +57,6 @@ button { cursor: pointer; font-family: var(--font-b); }
 .nav-logo { display: flex; align-items: center; gap: 10px; }
 .nav-logo-mark { width: 34px; height: 34px; background: var(--logo-bg); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: var(--font-k); font-weight: 800; font-size: 12px; color: #fff; letter-spacing: -0.5px; flex-shrink: 0; }
 .nav-logo-name { font-family: var(--font-h); font-weight: 800; font-size: 17px; color: var(--ink); letter-spacing: -0.4px; }
-.nav-links { display: flex; align-items: center; gap: 32px; }
-.nav-links > a, .nav-links > .nav-dd > .nav-dd-label { font-size: 14px; font-weight: 500; color: var(--muted); transition: color 0.15s; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
-.nav-links > a:hover, .nav-links > .nav-dd:hover > .nav-dd-label { color: var(--ink); }
 .nav-dd { position: relative; padding: 22px 0; }
 .nav-dd-caret { width: 10px; height: 10px; opacity: 0.6; transition: transform 0.15s; }
 .nav-dd:hover .nav-dd-caret { transform: rotate(180deg); }
@@ -76,7 +73,7 @@ button { cursor: pointer; font-family: var(--font-b); }
 .nav-right { display: flex; align-items: center; gap: 10px; }
 .nav-cta { display: inline-flex; align-items: center; gap: 7px; padding: 9px 18px; background: #fff; color: #111827; border: 1.5px solid #e5e7eb; border-radius: 8px; font-family: var(--font-b); font-size: 13px; font-weight: 600; transition: all 0.15s; text-decoration: none; }
 .nav-cta:hover { background: #f3f4f6; border-color: #d1d5db; }
-.hamburger { display: none; background: none; border: none; color: var(--ink); padding: 4px; cursor: pointer; }
+.hamburger { display: flex; align-items: center; justify-content: center; background: none; border: none; color: var(--ink); padding: 4px; cursor: pointer; }
 
 /* ══════════════════ MOBILE MENU ══════════════════════ */
 .mobile-menu {
@@ -102,7 +99,7 @@ button { cursor: pointer; font-family: var(--font-b); }
   transition: opacity 0.22s ease, transform 0.22s ease;
 }
 .mobile-menu.open { opacity: 1; pointer-events: auto; transform: translateY(0) scale(1); }
-.mobile-menu a, .mm-group > .mm-group-label {
+.mobile-menu a {
   font-family: var(--font-b);
   font-size: 14px;
   font-weight: 500;
@@ -116,21 +113,7 @@ button { cursor: pointer; font-family: var(--font-b); }
   cursor: pointer;
   user-select: none;
 }
-.mobile-menu a:hover, .mm-group > .mm-group-label:hover { background: rgba(0,0,0,0.05); color: var(--green); }
-.mm-caret { width: 12px; height: 12px; opacity: 0.5; transition: transform 0.18s; }
-.mm-group.open > .mm-group-label .mm-caret { transform: rotate(180deg); }
-.mm-submenu { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.22s ease; }
-.mm-submenu > div { overflow: hidden; }
-.mm-group.open > .mm-submenu { grid-template-rows: 1fr; }
-.mm-submenu a {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 2px;
-  padding: 8px 14px 8px 26px;
-  font-size: 13px;
-}
-.mm-submenu a small { font-size: 11px; font-weight: 400; color: var(--faint); }
+.mobile-menu a:hover { background: rgba(0,0,0,0.05); color: var(--green); }
 .mobile-menu a.mm-cta { background: var(--green); color: #fff; font-weight: 600; justify-content: center; padding: 11px 14px; margin-top: 6px; }
 .mobile-menu a.mm-cta:hover { background: var(--green); opacity: 0.92; color: #fff; }
 
@@ -159,8 +142,6 @@ button { cursor: pointer; font-family: var(--font-b); }
 /* ══════════════════ RESPONSIVE ═══════════════════════ */
 @media (max-width: 900px) {
   .footer-top { grid-template-columns: 1fr 1fr; }
-  .nav-links { display: none; }
-  .hamburger { display: flex; align-items: center; justify-content: center; }
 }
 @media (max-width: 600px) {
   .container { padding: 0 20px; }
@@ -193,3 +174,6 @@ button { cursor: pointer; font-family: var(--font-b); }
 .reviews-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 .reviews-actions .btn-primary, .reviews-actions .btn-secondary { text-decoration: none; }
 @media (max-width: 560px) { .reviews-panel { padding: 36px 22px; } .reviews-actions { flex-direction: column; } .reviews-actions a { justify-content: center; } }
+
+/* ── Item activo del menú ── */
+.mobile-menu a[aria-current="page"] { font-weight: 700; color: var(--ink); background: rgba(45,122,79,0.06); }
