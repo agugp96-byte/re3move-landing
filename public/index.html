@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Re3Move — Clínica de Fisioterapia en Mallorca">
 <meta property="og:description" content="Clínica de Recuperación, Readaptación y Rendimiento. Fisioterapia especializada, entrenamiento y suelo pélvico en Mallorca.">
-<meta property="og:image" content="/assets/photos/clinic-02-physio-baby.jpeg">
+<meta property="og:image" content="https://re3move.es/assets/photos/clinic-02-physio-baby.jpeg">
 <meta property="og:locale" content="es_ES">
 <meta property="og:url" content="https://re3move.es/">
 <meta property="og:site_name" content="Re3Move">
@@ -19,7 +19,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Re3Move — Clínica de Fisioterapia en Mallorca">
 <meta name="twitter:description" content="Clínica de Recuperación, Readaptación y Rendimiento. Fisioterapia especializada, entrenamiento y suelo pélvico en Mallorca.">
-<meta name="twitter:image" content="/assets/photos/clinic-02-physio-baby.jpeg">
+<meta name="twitter:image" content="https://re3move.es/assets/photos/clinic-02-physio-baby.jpeg">
 <meta name="theme-color" content="#3a5748">
 <meta name="robots" content="index,follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -52,7 +52,11 @@
 /* ══════════════════ HERO ═════════════════════════════ */
 .hero { min-height: 100vh; background: var(--logo-bg); display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 68px; }
 .hero::after { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 70% 60% at 80% 40%, rgba(255,255,255,0.04) 0%, transparent 65%); pointer-events:none; }
-.hero-inner { position: relative; z-index: 2; padding: 80px 0; }
+.hero-inner { position: relative; z-index: 2; padding: 80px 0; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
+.hero-media { position: relative; }
+.hero-media img { width: 100%; height: 540px; object-fit: cover; object-position: center; border-radius: 20px; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 24px 60px rgba(0,0,0,0.28); display: block; }
+.hero-media::after { content:''; position:absolute; inset:0; border-radius:20px; background: linear-gradient(160deg, rgba(58,87,72,0) 55%, rgba(58,87,72,0.35) 100%); pointer-events:none; }
+@media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; gap: 0; } .hero-media { display: none; } }
 .hero-kicker { display: flex; align-items: center; gap: 10px; margin-bottom: 28px; }
 .hero-kicker-line { width: 28px; height: 1.5px; background: rgba(255,255,255,0.3); flex-shrink: 0; }
 .hero-kicker-text { font-family: var(--font-b); font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.45); letter-spacing: 1.2px; text-transform: uppercase; }
@@ -118,8 +122,8 @@
 .team-header { margin-bottom: 56px; }
 .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 .team-card { display: flex; gap: 16px; align-items: flex-start; }
-.team-photo { width: 88px; height: 88px; flex-shrink: 0; border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, #eef2f0, #dde5e0); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: #8aa89a; }
-.team-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.team-photo { position: relative; width: 88px; height: 88px; flex-shrink: 0; border-radius: 50%; overflow: hidden; background: linear-gradient(135deg, #eef2f0, #dde5e0); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; color: #8aa89a; }
+.team-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .team-photo-initials { font-family: var(--font-h); font-weight: 800; font-size: 26px; color: #6b8a78; letter-spacing: -0.02em; }
 .team-info { flex: 1; min-width: 0; padding-top: 4px; }
 .team-name { font-family: var(--font-h); font-weight: 700; font-size: 17px; color: var(--ink); margin-bottom: 2px; letter-spacing: -0.01em; }
@@ -257,6 +261,7 @@
 <section class="hero" id="inicio">
   <div class="container">
     <div class="hero-inner">
+      <div class="hero-copy">
       <div class="hero-kicker fade-up">
         <div class="hero-kicker-line"></div>
         <span class="hero-kicker-text">Clínica de Fisioterapia — Mallorca</span>
@@ -281,6 +286,10 @@
         <div class="hero-divider"></div>
         <div class="hero-stat"><span class="hero-stat-num">8+</span><span class="hero-stat-label">Años de experiencia</span></div>
       </div>
+      </div>
+      <div class="hero-media fade-up d2">
+        <img src="/assets/photos/clinic-readapt-cable.jpg" alt="Sesión de readaptación supervisada en la clínica Re3Move" width="1080" height="1350" decoding="async">
+      </div>
     </div>
   </div>
 </section>
@@ -297,7 +306,7 @@
     </div>
     <div class="services-grid">
       <a href="/fisioterapia-avanzada.html" class="service-card">
-        <img class="service-bg" src="/assets/photos/clinic-02-physio-baby.jpeg" alt="Fisioterapeuta tratando a una paciente en consulta" width="724" height="1086" decoding="async">
+        <img class="service-bg" src="/assets/photos/clinic-physio-assess.jpg" alt="Fisioterapeuta valorando la pierna de un paciente" width="1080" height="1346" decoding="async">
         <div class="service-overlay"></div>
         <div class="service-body">
           <div class="service-num">01 →</div>
@@ -307,7 +316,7 @@
         </div>
       </a>
       <a href="/clinica-deportiva.html" class="service-card">
-        <img class="service-bg" src="/assets/photos/training-03-step-up.png" alt="Ejercicio de readaptación con step" loading="lazy" width="1284" height="1610" decoding="async">
+        <img class="service-bg" src="/assets/photos/clinic-stepup-jerseys.jpg" alt="Ejercicio de readaptación con banda y step supervisado" loading="lazy" width="1080" height="1350" decoding="async">
         <div class="service-overlay"></div>
         <div class="service-body">
           <div class="service-num">02 →</div>
@@ -317,7 +326,7 @@
         </div>
       </a>
       <a href="/clinica-deportiva.html#rendimiento" class="service-card">
-        <img class="service-bg" src="/assets/photos/training-01-stability.png" alt="Entrenamiento de estabilidad y fuerza" loading="lazy" width="1284" height="1735" decoding="async">
+        <img class="service-bg" src="/assets/photos/field-sprint.jpg" alt="Deportista en sprint durante entrenamiento de rendimiento en campo" loading="lazy" width="1080" height="1350" decoding="async">
         <div class="service-overlay"></div>
         <div class="service-body">
           <div class="service-num">03 →</div>
@@ -403,6 +412,7 @@
     <div class="team-grid">
       <div class="team-card">
         <div class="team-photo">
+          <img src="/assets/photos/team-xavier.jpg" alt="Xavier Calvo Estelrich" loading="lazy" onerror="this.remove()">
           <span class="team-photo-initials">XC</span>
         </div>
         <div class="team-info">
@@ -413,6 +423,7 @@
       </div>
       <div class="team-card">
         <div class="team-photo">
+          <img src="/assets/photos/team-augusto.jpg" alt="Augusto García Parralo" loading="lazy" onerror="this.remove()">
           <span class="team-photo-initials">AG</span>
         </div>
         <div class="team-info">
@@ -423,6 +434,7 @@
       </div>
       <div class="team-card">
         <div class="team-photo">
+          <img src="/assets/photos/team-david.jpg" alt="David Oncala Franco" loading="lazy" onerror="this.remove()">
           <span class="team-photo-initials">DO</span>
         </div>
         <div class="team-info">
@@ -433,6 +445,7 @@
       </div>
       <div class="team-card">
         <div class="team-photo">
+          <img src="/assets/photos/team-guillem.jpg" alt="Guillem Pulido" loading="lazy" onerror="this.remove()">
           <span class="team-photo-initials">GP</span>
         </div>
         <div class="team-info">
@@ -443,6 +456,7 @@
       </div>
       <div class="team-card">
         <div class="team-photo">
+          <img src="/assets/photos/team-marta.jpg" alt="Marta Hurtado" loading="lazy" onerror="this.remove()">
           <span class="team-photo-initials">MH</span>
         </div>
         <div class="team-info">
@@ -453,7 +467,8 @@
       </div>
       <div class="team-card">
         <div class="team-photo">
-          <img src="/assets/photos/clinic-07-judith-pelvis.jpeg" alt="Judith" loading="lazy" />
+          <img src="/assets/photos/clinic-07-judith-pelvis.jpeg" alt="Judith Iglesias" loading="lazy" onerror="this.remove()">
+          <span class="team-photo-initials">JI</span>
         </div>
         <div class="team-info">
           <div class="team-name">Judith</div>
@@ -463,6 +478,7 @@
       </div>
       <div class="team-card">
         <div class="team-photo">
+          <img src="/assets/photos/team-jeroni.jpg" alt="Jeroni Roig" loading="lazy" onerror="this.remove()">
           <span class="team-photo-initials">JR</span>
         </div>
         <div class="team-info">
@@ -473,6 +489,7 @@
       </div>
       <div class="team-card">
         <div class="team-photo">
+          <img src="/assets/photos/team-sergio.jpg" alt="Sergio Bibiloni" loading="lazy" onerror="this.remove()">
           <span class="team-photo-initials">SB</span>
         </div>
         <div class="team-info">
@@ -739,17 +756,21 @@ document.addEventListener('keydown', (e) => {
     document.getElementById('hamburger').focus();
   }
 });
-// Scroll reveal
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; }
+// Scroll reveal — skipped entirely when reduced motion is preferred or IntersectionObserver
+// is unavailable, so content always stays visible.
+const reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reduceMotion && 'IntersectionObserver' in window) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.service-card, .mujer-card, .method-step, .team-card, .test-card, .loc-item, .ch-btn-big').forEach(el => {
+    el.style.opacity = '0'; el.style.transform = 'translateY(18px)';
+    el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+    obs.observe(el);
   });
-}, { threshold: 0.1 });
-document.querySelectorAll('.service-card, .mujer-card, .method-step, .team-card, .test-card, .loc-item, .ch-btn-big').forEach(el => {
-  el.style.opacity = '0'; el.style.transform = 'translateY(18px)';
-  el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
-  obs.observe(el);
-});
+}
 
 // ── Formulario de leads → CRM (POST /api/leads/public) ──
 (function () {
