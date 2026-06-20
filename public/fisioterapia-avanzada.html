@@ -77,6 +77,14 @@
 .dis-tag.diagnostic { background: #eef4ff; color: #2454b3; border-color: #cbd9f2; }
 .dis-tag.guided { background: var(--green-dim); color: var(--green-d); border-color: rgba(45,122,79,0.25); }
 
+/* technique figure — designed, captioned band */
+.dis-figure { margin: 40px 0 4px; border-radius: 18px; overflow: hidden; border: 1px solid var(--border); background: #eef1f2; }
+.dis-figure img { display: block; width: 100%; height: 400px; object-fit: cover; object-position: center; }
+.dis-figure.is-product { background: linear-gradient(160deg,#fafbfb,#eef1f2); }
+.dis-figure.is-product img { object-fit: contain; height: 360px; padding: 26px; }
+.dis-figure figcaption { font-family: var(--font-b); font-size: 12px; font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase; color: var(--faint); padding: 13px 18px; background: #fff; border-top: 1px solid var(--border); }
+@media (max-width: 720px) { .dis-figure img { height: 240px; } .dis-figure.is-product img { height: 220px; } }
+
 /* spec card */
 .spec { background: var(--bg); border: 1px solid var(--border); border-radius: 16px; padding: 28px; }
 .spec-title { font-family: var(--font-h); font-size: 13px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--ink); margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
@@ -210,9 +218,6 @@
     <div class="phero-eyebrow">Pilar 01 · Fisioterapia avanzada</div>
     <h1>Tecnología clínica al servicio de tu <em>recuperación</em>.</h1>
     <p class="phero-lead">Siete disciplinas que combinamos según tu caso: imagen para entender qué pasa, técnicas invasivas guiadas para tratar lo que no avanza, y herramientas no invasivas que aceleran el proceso. Todas integradas con terapia manual y ejercicio — nunca aisladas.</p>
-    <div style="margin-top:44px;border-radius:18px;overflow:hidden;border:1px solid var(--border,#e6e8ea);background:#eef1f2;">
-      <img src="/assets/photos/equip-machine-wall.jpg" alt="Equipamiento de fisioterapia avanzada en la clínica Re3Move" loading="lazy" width="1080" height="1350" decoding="async" style="width:100%;height:440px;object-fit:contain;display:block;">
-    </div>
   </div>
 </section>
 
@@ -261,6 +266,11 @@
         <div class="spec-row"><span class="spec-key">Equipo</span><span class="spec-val">Ecógrafo profesional</span></div>
       </aside>
     </div>
+
+    <figure class="dis-figure">
+      <img src="/assets/photos/clinic-03-ecografia.jpeg" alt="Valoración con ecografía musculoesquelética en consulta Re3Move" loading="lazy" width="1536" height="2048" decoding="async">
+      <figcaption>Valoración con ecografía en consulta · Re3Move</figcaption>
+    </figure>
 
     <div class="dis-block">
       <div class="dis-block-eyebrow">Qué es</div>
@@ -339,9 +349,6 @@
           <span class="dis-tag guided">Guiada por ecografía</span>
           <span class="dis-tag">Corriente galvánica</span>
         </div>
-        <div style="margin-top:28px;border-radius:16px;overflow:hidden;border:1px solid var(--border,#e6e8ea);">
-          <img src="/assets/photos/equip-epi.jpg" alt="Equipo de EPI (electrólisis percutánea intratisular) en Re3Move" loading="lazy" width="1080" height="1350" decoding="async" style="width:100%;height:300px;object-fit:cover;object-position:center;display:block;">
-        </div>
       </div>
       <aside class="spec">
         <div class="spec-title">Resumen rápido</div>
@@ -352,6 +359,11 @@
         <div class="spec-row"><span class="spec-key">Recuperación</span><span class="spec-val">Molestia 24–72h</span></div>
       </aside>
     </div>
+
+    <figure class="dis-figure">
+      <img src="/assets/photos/equip-epi.jpg" alt="Equipo de EPI — electrólisis percutánea intratisular en Re3Move" loading="lazy" width="1080" height="1350" decoding="async">
+      <figcaption>Equipo de EPI guiada por ecografía · Re3Move</figcaption>
+    </figure>
 
     <div class="dis-block">
       <div class="dis-block-eyebrow">Qué es</div>
@@ -618,6 +630,11 @@
       </aside>
     </div>
 
+    <figure class="dis-figure">
+      <img src="/assets/photos/equip-machine-wall.jpg" alt="Sistema superinductivo en la clínica Re3Move" loading="lazy" width="1080" height="1350" decoding="async">
+      <figcaption>Sistema superinductivo en la clínica · Re3Move</figcaption>
+    </figure>
+
     <div class="dis-block">
       <div class="dis-block-eyebrow">Qué es</div>
       <h3 class="dis-block-title">En qué consiste y qué buscamos.</h3>
@@ -782,9 +799,6 @@
           <span class="dis-tag">660 nm</span>
           <span class="dis-tag">0% rayos UV</span>
         </div>
-        <div style="margin-top:28px;border-radius:16px;overflow:hidden;border:1px solid var(--border,#e6e8ea);background:#0d0d0d;">
-          <img src="/assets/photos/equip-redlight.webp" alt="Panel de terapia de luz roja Mito Light en Re3Move" loading="lazy" width="1024" height="1024" decoding="async" style="width:100%;height:320px;object-fit:contain;display:block;">
-        </div>
       </div>
       <aside class="spec">
         <div class="spec-title">Resumen rápido</div>
@@ -795,6 +809,11 @@
         <div class="spec-row"><span class="spec-key">Molestias</span><span class="spec-val">Ninguna</span></div>
       </aside>
     </div>
+
+    <figure class="dis-figure is-product">
+      <img src="/assets/photos/equip-redlight.webp" alt="Panel de terapia de luz roja Mito Light, 660 nm" loading="lazy" width="1024" height="1024" decoding="async">
+      <figcaption>Panel de luz roja Mito Light · 660 nm</figcaption>
+    </figure>
 
     <div class="dis-block">
       <div class="dis-block-eyebrow">Qué es</div>
