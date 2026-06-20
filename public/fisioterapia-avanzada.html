@@ -82,7 +82,9 @@
 .dis-figure img { display: block; width: 100%; height: 400px; object-fit: cover; object-position: center; }
 .dis-figure.is-product { background: linear-gradient(160deg,#fafbfb,#eef1f2); }
 .dis-figure.is-product img { object-fit: contain; height: 360px; padding: 26px; }
+.dis-figure.is-dark { background: linear-gradient(160deg,#1b1e20,#0e1011); border-color: #2a2e31; }
 .dis-figure figcaption { font-family: var(--font-b); font-size: 12px; font-weight: 600; letter-spacing: 0.6px; text-transform: uppercase; color: var(--faint); padding: 13px 18px; background: #fff; border-top: 1px solid var(--border); }
+.dis-figure.is-dark figcaption { background: #15181a; color: #aab0b4; border-top-color: rgba(255,255,255,0.08); }
 @media (max-width: 720px) { .dis-figure img { height: 240px; } .dis-figure.is-product img { height: 220px; } }
 
 /* spec card */
@@ -267,9 +269,9 @@
       </aside>
     </div>
 
-    <figure class="dis-figure">
-      <img src="/assets/photos/clinic-03-ecografia.jpeg" alt="Valoración con ecografía musculoesquelética en consulta Re3Move" loading="lazy" width="1536" height="2048" decoding="async">
-      <figcaption>Valoración con ecografía en consulta · Re3Move</figcaption>
+    <figure class="dis-figure is-product is-dark">
+      <img src="/assets/photos/equip-ecografo.jpg" alt="Ecógrafo VINNO R300 para valoración musculoesquelética en Re3Move" loading="lazy" width="1080" height="1350" decoding="async">
+      <figcaption>Ecógrafo VINNO R300 · Re3Move</figcaption>
     </figure>
 
     <div class="dis-block">
@@ -541,6 +543,11 @@
         <div class="spec-row"><span class="spec-key">Equipo</span><span class="spec-val">Indiba Activ</span></div>
       </aside>
     </div>
+
+    <figure class="dis-figure is-product">
+      <img src="/assets/photos/equip-diatermia.jpg" alt="Equipo de diatermia por radiofrecuencia en Re3Move" loading="lazy" width="550" height="550" decoding="async">
+      <figcaption>Equipo de diatermia por radiofrecuencia · Re3Move</figcaption>
+    </figure>
 
     <div class="dis-block">
       <div class="dis-block-eyebrow">Qué es</div>
