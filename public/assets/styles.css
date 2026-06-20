@@ -234,7 +234,7 @@ button { cursor: pointer; font-family: var(--font-b); }
 .manifesto-word.solid { color: #fff; -webkit-text-stroke: 0; }
 .manifesto-dot { color: var(--green-b); -webkit-text-stroke: 0; }
 @keyframes manifestoScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@media (prefers-reduced-motion: reduce) { .manifesto-track { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .manifesto-track { animation-duration: 70s; } }
 
 /* Línea de acento animada en cards de servicio/mujer */
 .service-card::after, .mujer-card::after {
