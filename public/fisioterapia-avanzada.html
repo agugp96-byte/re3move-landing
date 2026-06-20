@@ -44,7 +44,7 @@
 .crumbs-current { color: var(--ink); font-weight: 500; }
 
 /* === Page hero === */
-.phero { padding: 56px 0 64px; }
+.phero { padding: 56px 0 64px; background: radial-gradient(ellipse 46% 60% at 92% 12%, rgba(45,122,79,0.07) 0%, transparent 60%); }
 .phero-eyebrow { font-family: var(--font-k); font-size: 12px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; color: var(--green); margin-bottom: 18px; }
 .phero h1 { font-family: var(--font-h); font-weight: 800; font-size: clamp(40px, 6vw, 72px); line-height: 0.98; letter-spacing: -0.045em; color: var(--ink); margin-bottom: 24px; text-wrap: balance; max-width: 14ch; }
 .phero h1 em { font-style: normal; color: var(--green); }
@@ -956,6 +956,22 @@
   }
   setActive();
   window.addEventListener('scroll', setActive, {passive: true});
+})();
+
+// Scroll reveal — se omite con reduced-motion o sin IntersectionObserver (contenido siempre visible)
+(function() {
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce || !('IntersectionObserver' in window)) return;
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'none'; obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.dis-block, .spec').forEach(function(el) {
+    el.style.opacity = '0'; el.style.transform = 'translateY(16px)';
+    el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+    obs.observe(el);
+  });
 })();
 </script>
 

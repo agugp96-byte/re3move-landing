@@ -31,14 +31,14 @@
 .nav { position: sticky; }
 
 /* Hero */
-.hero { padding: 96px 0 0; background: var(--logo-bg); position: relative; overflow: hidden; color: #fff; }
+.hero { padding: 96px 0 0; background: linear-gradient(157deg, #2f4a3d 0%, #3a5748 46%, #283b30 100%); position: relative; overflow: hidden; color: #fff; }
 .hero::before {
   content: ''; position: absolute; inset: 0; opacity: 0.05;
   background-image: linear-gradient(0deg, transparent 95%, #fff 95%), linear-gradient(90deg, transparent 95%, #fff 95%);
   background-size: 56px 56px;
   pointer-events: none;
 }
-.hero::after { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 70% 60% at 80% 30%, rgba(77,190,110,0.12) 0%, transparent 65%); pointer-events:none; }
+.hero::after { content:''; position:absolute; inset:0; pointer-events:none; background: radial-gradient(ellipse 58% 50% at 80% 26%, rgba(77,190,110,0.16) 0%, transparent 60%), radial-gradient(ellipse 70% 60% at 8% 95%, rgba(0,0,0,0.28) 0%, transparent 55%); }
 .hero-inner { position: relative; z-index: 2; max-width: 920px; margin: 0 auto; text-align: center; padding: 32px 0 64px; }
 .hero-tag { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: var(--green-b); background: rgba(77,190,110,0.10); border: 1px solid rgba(77,190,110,0.3); padding: 5px 12px; border-radius: 20px; margin-bottom: 22px; }
 .hero-tag-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green-b); }

@@ -50,8 +50,9 @@
 </script>
 <style>
 /* ══════════════════ HERO ═════════════════════════════ */
-.hero { min-height: 100vh; background: var(--logo-bg); display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 68px; }
-.hero::after { content:''; position:absolute; inset:0; background: radial-gradient(ellipse 70% 60% at 80% 40%, rgba(255,255,255,0.04) 0%, transparent 65%); pointer-events:none; }
+.hero { min-height: 100vh; background: linear-gradient(157deg, #2f4a3d 0%, #3a5748 46%, #283b30 100%); display: flex; align-items: center; position: relative; overflow: hidden; padding-top: 68px; }
+.hero::after { content:''; position:absolute; inset:0; z-index:1; pointer-events:none; background: radial-gradient(ellipse 58% 50% at 82% 30%, rgba(77,190,110,0.16) 0%, transparent 60%), radial-gradient(ellipse 70% 60% at 8% 92%, rgba(0,0,0,0.30) 0%, transparent 55%); }
+.hero::before { content:''; position:absolute; inset:0; z-index:1; pointer-events:none; opacity:0.4; mix-blend-mode:overlay; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); background-size:160px 160px; }
 .hero-inner { position: relative; z-index: 2; padding: 80px 0; display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 56px; align-items: center; }
 .hero-media { position: relative; }
 .hero-media img { width: 100%; height: 540px; object-fit: cover; object-position: center top; border-radius: 20px; border: 1px solid rgba(255,255,255,0.12); box-shadow: 0 24px 60px rgba(0,0,0,0.28); display: block; }
@@ -259,6 +260,7 @@
 
 <!-- HERO -->
 <section class="hero" id="inicio">
+  <span class="hero-glyph" aria-hidden="true">³</span>
   <div class="container">
     <div class="hero-inner">
       <div class="hero-copy">
@@ -280,11 +282,11 @@
         <a href="#servicios" class="btn-ghost">Ver servicios</a>
       </div>
       <div class="hero-bottom fade-up d4">
-        <div class="hero-stat"><span class="hero-stat-num">+2.000</span><span class="hero-stat-label">Personas tratadas</span></div>
+        <div class="hero-stat"><span class="hero-stat-num" data-count="2000" data-prefix="+" data-sep="1">+2.000</span><span class="hero-stat-label">Personas tratadas</span></div>
         <div class="hero-divider"></div>
-        <div class="hero-stat"><span class="hero-stat-num">3</span><span class="hero-stat-label">Pilares de tratamiento</span></div>
+        <div class="hero-stat"><span class="hero-stat-num" data-count="3">3</span><span class="hero-stat-label">Pilares de tratamiento</span></div>
         <div class="hero-divider"></div>
-        <div class="hero-stat"><span class="hero-stat-num">8+</span><span class="hero-stat-label">Años de experiencia</span></div>
+        <div class="hero-stat"><span class="hero-stat-num" data-count="8" data-suffix="+">8+</span><span class="hero-stat-label">Años de experiencia</span></div>
       </div>
       </div>
       <div class="hero-media fade-up d2">
@@ -371,6 +373,14 @@
         </div>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- MANIFESTO -->
+<section class="manifesto" aria-label="Recupera, Readapta, Rinde">
+  <div class="manifesto-track">
+    <div class="manifesto-item"><span class="manifesto-word solid">Recupera</span><span class="manifesto-dot">·</span><span class="manifesto-word">Readapta</span><span class="manifesto-dot">·</span><span class="manifesto-word solid">Rinde</span><span class="manifesto-dot">·</span></div>
+    <div class="manifesto-item"><span class="manifesto-word solid">Recupera</span><span class="manifesto-dot">·</span><span class="manifesto-word">Readapta</span><span class="manifesto-dot">·</span><span class="manifesto-word solid">Rinde</span><span class="manifesto-dot">·</span></div>
   </div>
 </section>
 
@@ -765,12 +775,35 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
       if (e.isIntersecting) { e.target.style.opacity = '1'; e.target.style.transform = 'translateY(0)'; obs.unobserve(e.target); }
     });
   }, { threshold: 0.1 });
-  document.querySelectorAll('.service-card, .mujer-card, .method-step, .team-card, .test-card, .loc-item, .ch-btn-big').forEach(el => {
+  document.querySelectorAll('.service-card, .mujer-card, .method-step, .team-card, .test-card, .loc-item, .ch-btn-big').forEach((el, i) => {
     el.style.opacity = '0'; el.style.transform = 'translateY(18px)';
-    el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    el.style.transitionDelay = (i % 4) * 0.07 + 's';
     obs.observe(el);
   });
 }
+
+// Count-up de las estadísticas del hero (degrada a los valores estáticos si no corre)
+(function () {
+  if (reduceMotion) return;
+  document.querySelectorAll('.hero-stat-num[data-count]').forEach(function (el) {
+    var target = parseInt(el.getAttribute('data-count'), 10);
+    var prefix = el.getAttribute('data-prefix') || '';
+    var suffix = el.getAttribute('data-suffix') || '';
+    var sep = el.getAttribute('data-sep');
+    var dur = 1400, start = null;
+    function fmt(n) { return prefix + (sep ? n.toLocaleString('es-ES') : String(n)) + suffix; }
+    function step(ts) {
+      if (!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(Math.round(target * eased));
+      if (p < 1) requestAnimationFrame(step);
+    }
+    el.textContent = fmt(0);
+    requestAnimationFrame(step);
+  });
+})();
 
 // ── Formulario de leads → CRM (POST /api/leads/public) ──
 (function () {
